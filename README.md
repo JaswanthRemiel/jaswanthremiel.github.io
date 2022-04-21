@@ -5,7 +5,7 @@
 
 <p align="left"> <a href="https://twitter.com/jaswanth_remiel" target="blank"><img src="https://img.shields.io/twitter/follow/jaswanth_remiel?logo=twitter&style=for-the-badge" alt="jaswanth_remiel" /></a> </p>
 
-- 🔭 I’m currently working on [YoutubeDiscord](https://github.com/JaswanthRemiel/YoutubeDISCORD)
+- 🔭 I’m currently working on [Discord Automation With Python](https://github.com/JaswanthRemiel/Discord-RPC-in-Python)
 
 - 🌱 I’m currently learning **Java , C++**
 
