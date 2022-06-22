@@ -11,7 +11,7 @@
 
 - 👨‍💻 All of my projects are available at [https://github.com/JaswanthRemiel](https://github.com/JaswanthRemiel)
 
-- 📝 I regularly write articles on [https://medium.com/jaswanthremiel](https://medium.com/jaswanthremiel)
+- 📝 I regularly write articles on [https://medium.com/jaswanthremiel](https://medium.com/@jaswanthremiel)
 
 - 💬 Ask me about **Python,C++**
 
