@@ -39,7 +39,7 @@ Whether you're a fellow developer, a tech enthusiast, or simply curious about wh
 
 
 ## Rapidfire  
-<table><tr><td valign="top" width="50%">
+
 
 - 🔭 I’m currently working on [Resume Generator](https://github.com/JaswanthRemiel/resumegenerator)  
   
@@ -53,7 +53,7 @@ Whether you're a fellow developer, a tech enthusiast, or simply curious about wh
 - ⚡ Fun fact: I keep night shift swithed on at all times   
 
 
-</td><td valign="top" width="50%">
+
 
 
 
