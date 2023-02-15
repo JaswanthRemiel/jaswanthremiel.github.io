@@ -55,9 +55,6 @@ Whether you're a fellow developer, a tech enthusiast, or simply curious about wh
 
 </td><td valign="top" width="50%">
 
-<div align="center">
-<img src="https://media.tenor.com/xVT3VL1y3D4AAAAS/hello-penguin.gif" align="center" style="width: 100%" />
-</div>  
 
 
 </td></tr></table>  
