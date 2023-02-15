@@ -1,5 +1,7 @@
 ## Hey 👋, I'm Jaswanth Remiel AG  
-  
+
+<img src="https://media1.giphy.com/media/3ogwFGEHrVxusDbDjO/giphy.gif" align="center" style="width: 100%" />
+
 
 <a href="https://github.com/jaswanthremiel" target="_blank">
 <img src=https://img.shields.io/badge/github-%2324292e.svg?&style=for-the-badge&logo=github&logoColor=white alt=github style="margin-bottom: 5px;" />
