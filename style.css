@@ -1,4 +1,4 @@
-<style data-remiel-css-ssr-minified="" data-remiel-components="remiel-g6xMS remiel-ulNVU remiel-d8Rlc remiel-M9ilP">
+
          html,
          body,
          #main {
@@ -3677,6 +3677,7 @@
          --remiel-text-decoration: none;
          --remiel-text-transform: none;
          }
+         }
          @media (max-width: 1439px) and (min-width: 1300px) {
          .remiel-MCJEX .remiel-styles-preset-j1h0tg:not(.rich-text-wrapper),
          .remiel-MCJEX .remiel-styles-preset-j1h0tg.rich-text-wrapper p {
@@ -3728,4 +3729,3 @@
          .ssr-variant {
          display: contents;
          }
-      </style>
