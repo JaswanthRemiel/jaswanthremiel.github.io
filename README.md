@@ -138,9 +138,3 @@ Contributions are welcome! Here are several ways you can contribute:
 This project is protected under the MIT License. For more details, refer to the [LICENSE](https://github.com/JaswanthRemiel/jaswanthremiel.github.io/blob/main/LICENSE) file.
 
 ---
-
-##  Acknowledgments
-
-- List any resources, contributors, inspiration, etc. here.
-
----
