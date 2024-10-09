@@ -83,7 +83,7 @@
 ##  Project Roadmap
 
 - [X] **`Task 1`**: <strike>Initial Deploy & Domain routing </strike>
-- [ ] **`Task 2`**: <strike>Setup project pages.</strike>
+- [X] **`Task 2`**: <strike>Setup project pages.</strike>
 - [ ] **`Task 3`**: Include necessary things.
 
 ---
