@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: hsl(240, 10%, 6%);
+    --foreground: hsl(0, 0%, 98%);
+    --card: hsl(240, 10%, 12%);
+    --card-foreground: hsl(0, 0%, 98%);
+    --muted-foreground: hsl(240, 5%, 60%);
+    --border: hsl(240, 10%, 16%);
+    --radius: 0.5rem;
+    --shadow-light: rgba(0, 0, 0, 0.2);
+    --shadow-dark: rgba(0, 0, 0, 0.4);
+  }
+
+  .dark {
+    --background: hsl(240, 10%, 6%);
+    --foreground: hsl(0, 0%, 98%);
+    --card: hsl(240, 10%, 12%);
+    --card-foreground: hsl(0, 0%, 98%);
+    --muted-foreground: hsl(240, 5%, 60%);
+    --border: hsl(240, 10%, 16%);
+    --shadow-light: rgba(255, 255, 255, 0.05);
+    --shadow-dark: rgba(0, 0, 0, 0.3);
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    /* Prevent horizontal scrolling */
+    @apply overflow-x-hidden;
+  }
+
+  /* Hide vertical scrollbar but keep scrolling on mobile */
+  @media (max-width: 768px) {
+    html,
+    body {
+      height: 100%; /* Ensure full height for scrolling */
+      overflow-y: scroll; /* Enable scrolling */
+    }
+
+    /* Hide the scrollbar but still allow scrolling */
+    body::-webkit-scrollbar {
+      display: none; /* Hide the scrollbar in Webkit browsers (Chrome, Safari) */
+    }
+
+    /* For Firefox, hide the scrollbar but keep the ability to scroll */
+    body {
+      scrollbar-width: none; /* Hide scrollbar in Firefox */
+    }
+  }
+}
