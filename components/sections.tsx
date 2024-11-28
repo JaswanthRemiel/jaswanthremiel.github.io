@@ -14,6 +14,16 @@ export function Sections() {
     >
       <div className="flex md:grid md:grid-cols-3 gap-16 w-[220%] md:w-full">
         <div className="w-full space-y-8">
+          <h2 className="font-sm text-gray-400">building</h2>
+          <div className="space-y-6">
+            <ProjectItem
+              href="https://remiel.fyi/linkdescrip-ai/"
+              title="linkdescrip ai "
+              description="simple, optimized linkedIn headlines generator"
+            />
+          </div>
+        </div>
+        <div className="w-full space-y-8">
           <h2 className="font-sm text-gray-400">projects</h2>
           <div className="space-y-6">
             <div>
@@ -21,7 +31,7 @@ export function Sections() {
                 href="https://remiel.fyi/batmode/"
                 className="group inline-flex items-center space-x-1 text-white hover:text-gray-300 transition-colors"
               >
-                <span>Batmode extension</span>
+                <span>batmode extension</span>
                 <motion.span
                   className="inline-block opacity-50"
                   whileHover={{ x: 2 }}
@@ -51,7 +61,7 @@ export function Sections() {
                 href="https://remiel.fyi/ai-summarizer/"
                 className="group inline-flex items-center space-x-1 text-white hover:text-gray-300 transition-colors"
               >
-                <span>AI Text Summarizer</span>
+                <span>ai text summarizer</span>
                 <motion.span
                   className="inline-block opacity-50"
                   whileHover={{ x: 2 }}
@@ -73,8 +83,8 @@ export function Sections() {
                 </motion.span>
               </Link>
               <p className="text-sm font-mono text-gray-400 mt-1">
-                generates meaningful summaries powered by Hugging Face's
-                Facebook BART model.
+                generates meaningful summaries powered by hugging face's
+                facebook BART model.
               </p>
             </div>
             <div>
@@ -82,7 +92,7 @@ export function Sections() {
                 href="https://remiel.fyi/cryptocat"
                 className="group inline-flex items-center space-x-1 text-white hover:text-gray-300 transition-colors"
               >
-                <span>CryptoCat NFT</span>
+                <span>cryptocat nft</span>
                 <motion.span
                   className="inline-block opacity-50"
                   whileHover={{ x: 2 }}
@@ -104,8 +114,8 @@ export function Sections() {
                 </motion.span>
               </Link>
               <p className="text-sm font-mono text-gray-400 mt-1">
-                Twitter bot with a paw firmly placed in the rapidly evolving
-                world of Non-Fungible Tokens (NFTs)
+                twitter bot with a paw firmly placed in the rapidly evolving
+                world of non-fungible tokens (NFTs)
               </p>
             </div>
           </div>
@@ -115,28 +125,18 @@ export function Sections() {
           <div className="space-y-6">
             <ProjectItem
               href="https://uxplanet.org/must-have-design-resources-in-2023-part-1-fc3cbb5fcaf4"
-              title="Must-have Design Resources in 2023"
+              title="must-have design resources in 2023"
               description="most important resources for graphic designer"
             />
             <ProjectItem
               href="https://medium.com/design-bootcamp/the-5-mistakes-that-ux-beginners-make-1c131598cff3"
-              title="The 5 mistakes that UX beginners make"
+              title="the 5 mistakes that ux beginners make"
               description="the most common mistakes and how you can avoid."
             />
             <ProjectItem
               href="https://medium.com/design-bootcamp/my-top-10-favourite-fonts-of-2021-f8434adde25c"
-              title="My top 5 favourite fonts of 2021"
+              title="my top 5 favourite fonts of 2021"
               description="fonts are a great way to liven up your projects."
-            />
-          </div>
-        </div>
-        <div className="w-full space-y-8">
-          <h2 className="font-sm text-gray-400">building</h2>
-          <div className="space-y-6">
-            <ProjectItem
-              href="https://remiel.fyi/linkdescrip-ai/"
-              title="LinkDescrip AI "
-              description="Simple, optimized LinkedIn headlines generator"
             />
           </div>
         </div>
