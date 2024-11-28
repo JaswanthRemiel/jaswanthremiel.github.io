@@ -8,16 +8,11 @@ export function Sections() {
   return (
     <motion.section
       className="overflow-x-auto pb-6 md:pb-0 md:overflow-x-visible"
-      initial={{ opacity: 0, x: -200 }} // Start off-screen to the left
-      animate={{ opacity: 1, x: 0 }} // Animate to its final position
-      transition={{ duration: 0.5, delay: 0.2 }} // Smooth transition
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.2 }}
     >
-      <motion.div
-        className="flex md:grid md:grid-cols-3 gap-16 w-[220%] md:w-full"
-        initial={{ x: "-100%" }} // Start off-screen to the left
-        animate={{ x: "0%" }} // Animate to its final position
-        transition={{ duration: 0.8, type: "spring", stiffness: 50 }} // Springy effect
-      >
+      <div className="flex md:grid md:grid-cols-3 gap-16 w-[220%] md:w-full">
         <div className="w-full space-y-8">
           <h2 className="font-sm text-gray-400">projects</h2>
           <div className="space-y-6">
@@ -145,7 +140,7 @@ export function Sections() {
             />
           </div>
         </div>
-      </motion.div>
+      </div>
     </motion.section>
   );
 }
