@@ -12,7 +12,7 @@ export function Sections() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.2 }}
     >
-      <div className="flex md:grid md:grid-cols-3 gap-16 w-[220%] md:w-full">
+      <div className="flex md:grid md:grid-cols-3 gap-16 w-[190%] md:w-full">
         <div className="w-full space-y-8">
           <h2 className="font-sm text-gray-400">building</h2>
           <div className="space-y-6">
