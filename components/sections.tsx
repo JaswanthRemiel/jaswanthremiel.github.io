@@ -8,13 +8,18 @@ export function Sections() {
   return (
     <motion.section
       className="overflow-x-auto pb-6 md:pb-0 md:overflow-x-visible"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: 0.2 }}
+      initial={{ opacity: 0, x: -200 }} // Start off-screen to the left
+      animate={{ opacity: 1, x: 0 }} // Animate to its final position
+      transition={{ duration: 0.5, delay: 0.2 }} // Smooth transition
     >
-      <div className="flex md:grid md:grid-cols-3 gap-16 w-[220%] md:w-full">
+      <motion.div
+        className="flex md:grid md:grid-cols-3 gap-16 w-[220%] md:w-full"
+        initial={{ x: "-100%" }} // Start off-screen to the left
+        animate={{ x: "0%" }} // Animate to its final position
+        transition={{ duration: 0.8, type: "spring", stiffness: 50 }} // Springy effect
+      >
         <div className="w-full space-y-8">
-          <h2 className="font-medium text-gray-100">Projects</h2>
+          <h2 className="font-sm text-gray-400">projects</h2>
           <div className="space-y-6">
             <div>
               <Link
@@ -111,7 +116,7 @@ export function Sections() {
           </div>
         </div>
         <div className="w-full space-y-8">
-          <h2 className="font-medium text-gray-100">Writing</h2>
+          <h2 className="font-sm text-gray-400">writing</h2>
           <div className="space-y-6">
             <ProjectItem
               href="https://uxplanet.org/must-have-design-resources-in-2023-part-1-fc3cbb5fcaf4"
@@ -131,7 +136,7 @@ export function Sections() {
           </div>
         </div>
         <div className="w-full space-y-8">
-          <h2 className="font-medium text-gray-100">Building</h2>
+          <h2 className="font-sm text-gray-400">building</h2>
           <div className="space-y-6">
             <ProjectItem
               href="https://remiel.fyi/linkdescrip-ai/"
@@ -140,7 +145,7 @@ export function Sections() {
             />
           </div>
         </div>
-      </div>
+      </motion.div>
     </motion.section>
   );
 }

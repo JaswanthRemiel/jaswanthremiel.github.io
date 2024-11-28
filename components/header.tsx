@@ -5,17 +5,27 @@ import HyperText from "@/components/ui/hyper-text";
 import Link from "next/link";
 import Image from "next/image";
 import * as links from "./details";
-import { FlipWords } from "./ui/flip-words";
 import { Newsreader } from "next/font/google";
+import { LinksComponent } from "./linkscomponent";
 
 const newsreader = Newsreader({ subsets: ["latin"], weight: ["300"] });
 
-const words = [
-  "fullstack developer.",
-  "content creator.",
-  "graphic designer.",
-  "gamer.",
-];
+function ArrowIcon() {
+  return (
+    <svg
+      width="12"
+      height="12"
+      viewBox="0 0 12 12"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M2.07102 11.3494L0.963068 10.2415L9.2017 1.98864H2.83807L2.85227 0.454545H11.8438V9.46023H10.2955L10.3097 3.09659L2.07102 11.3494Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}
 
 export function Header() {
   return (
@@ -62,6 +72,34 @@ export function Header() {
         </Link>
         .
       </p>
+      <p className={`${newsreader.className} text-justify`}>
+        checkout my{" "}
+        <Link
+          href={links.blog}
+          target="_blank"
+          className="underline decoration-gray-400"
+        >
+          blog
+        </Link>{" "}
+        ,{" "}
+        <Link
+          href={links.store}
+          target="_blank"
+          className="underline decoration-gray-400"
+        >
+          store
+        </Link>
+        , and{" "}
+        <Link
+          href={links.merch}
+          target="_blank"
+          className="underline decoration-gray-400"
+        >
+          merch
+        </Link>
+        .
+      </p>
+      {/* <LinksComponent /> */}
     </motion.header>
   );
 }
