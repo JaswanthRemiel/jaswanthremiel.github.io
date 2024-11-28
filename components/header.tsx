@@ -46,12 +46,9 @@ export function Header() {
         />
       </div>
       <br></br>
-
-      {/* Description */}
       <h1>
         <span>
           Jaswanth Remiel
-          {/* <FlipWords words={words} /> <br /> */}
         </span>
       </h1>
       <p className={`${newsreader.className} text-gray-100`}>
