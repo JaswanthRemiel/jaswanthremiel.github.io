@@ -79,7 +79,7 @@ export function Sections() {
             </div>
             <div>
               <Link
-                href="#"
+                href="https://remiel.fyi/cryptocat"
                 className="group inline-flex items-center space-x-1 text-white hover:text-gray-300 transition-colors"
               >
                 <span>CryptoCat NFT</span>
