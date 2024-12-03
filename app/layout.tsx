@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import { Newsreader } from "next/font/google";
+import * as links from "@/components/details";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -15,7 +16,7 @@ export const metadata = {
     url: "https://remiel.fyi",
     images: [
       {
-        url: "/app/preview.png", // Path to your preview image
+        url: links.preview, // Path to preview image
         width: 1200,
         height: 630,
         alt: "Remiel's Portfolio",
@@ -27,7 +28,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Remiel — Portfolio",
     description: "Showcasing my work, projects, and achievements.",
-    images: ["/app/preview.png"], // Path to your preview image
+    images: [links.preview], // Path to preview image
   },
 };
 

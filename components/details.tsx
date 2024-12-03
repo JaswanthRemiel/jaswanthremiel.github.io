@@ -5,3 +5,5 @@ export const youtube = "https://youtube.com/@remielgraphy";
 export const blog = "./blog";
 export const store = "./store";
 export const merch = "https://merch.remiel.fyi";
+export const preview =
+  "https://raw.githubusercontent.com/JaswanthRemiel/jaswanthremiel.github.io/refs/heads/main/app/preview.png";
