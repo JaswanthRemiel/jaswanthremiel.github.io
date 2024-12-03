@@ -7,7 +7,8 @@ const newsreader = Newsreader({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Remiel — Portfolio",
-  description: "Remiel's portfolio website built with Next.js",
+  description:
+    "Explore Remiel's portfolio showcasing projects, achievements, and expertise in tech, built with Next.js for a seamless experience.",
   openGraph: {
     title: "Remiel — Portfolio",
     description: "Showcasing my work, projects, and achievements.",
