@@ -16,7 +16,7 @@ export const metadata = {
     url: "https://remiel.fyi",
     images: [
       {
-        url: links.preview, // Path to preview image
+        url: links.preview,
         width: 1200,
         height: 630,
         alt: "Remiel's Portfolio",
@@ -28,7 +28,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Remiel — Portfolio",
     description: "Showcasing my work, projects, and achievements.",
-    images: [links.preview], // Path to preview image
+    images: [links.preview],
   },
 };
 
@@ -39,7 +39,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>{/* Add any custom global metadata here if necessary */}</head>
+      <head></head>
       <body className={`${inter.className} bg-black text-white antialiased`}>
         {children}
       </body>
