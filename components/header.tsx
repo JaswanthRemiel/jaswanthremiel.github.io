@@ -47,9 +47,7 @@ export function Header() {
       </div>
       <br></br>
       <h1>
-        <span>
-          Jaswanth Remiel
-        </span>
+        <span>Jaswanth Remiel</span>
       </h1>
       <p className={`${newsreader.className} text-gray-100`}>
         where art meets code, I create digital experiences that captivate and

@@ -1,10 +1,8 @@
 import { Inter } from "next/font/google";
-import { Newsreader } from "next/font/google";
 import * as links from "@/components/details";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
-const newsreader = Newsreader({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Remiel — Portfolio",
