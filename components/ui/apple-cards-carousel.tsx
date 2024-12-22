@@ -16,13 +16,6 @@ interface CarouselProps {
   items: JSX.Element[];
 }
 
-type Card = {
-  src: string;
-  title: string;
-  category: string;
-  content: React.ReactNode;
-};
-
 export const CarouselContext = createContext<{
   onCardClose: (index: number) => void;
   currentIndex: number;
@@ -67,7 +60,12 @@ export const Card = ({
   index,
   layout = false,
 }: {
-  card: Card;
+  card: {
+    title: string;
+    category: string;
+    content: JSX.Element;
+    src: string;
+  };
   index: number;
   layout?: boolean;
 }) => {
