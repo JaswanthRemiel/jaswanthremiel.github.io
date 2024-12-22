@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { motion } from "framer-motion";
 import {
   Carousel,
   Card as AppleCard,
@@ -14,9 +15,16 @@ export function AppleCardsCarouselDemo() {
   ));
 
   return (
-    <div className="w-full h-full">
-      <Carousel items={cards} />
-    </div>
+    <motion.div
+      className="overflow-x-auto pb-6 md:pb-0 md:overflow-x-visible"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.2 }}
+    >
+      <div className="w-full h-full">
+        <Carousel items={cards} />
+      </div>{" "}
+    </motion.div>
   );
 }
 
