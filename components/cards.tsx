@@ -1,14 +1,16 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import {
   Carousel,
-  Card as ImportedCarouselCard,
+  Card as AppleCard,
 } from "@/components/ui/apple-cards-carousel";
 
 export function AppleCardsCarouselDemo() {
   const cards = data.map((card, index) => (
-    <ImportedCarouselCard key={card.src} card={card} index={index} />
+    <Card key={card.src} card={card} index={index} />
   ));
 
   return (
@@ -50,7 +52,7 @@ const Cards = () => {
   );
 };
 
-export const LocalCarouselCard = ({
+export const Card = ({
   card,
   index,
   layout = false,
@@ -67,7 +69,10 @@ export const LocalCarouselCard = ({
 }) => {
   return (
     <div className="rounded-3xl bg-gray-100 dark:bg-neutral-900 h-80 w-56 md:h-[40rem] md:w-96 overflow-hidden flex flex-col items-start justify-start relative z-10">
-      <Link href={card.link || "#"} className="relative h-full w-full">
+      <Link
+        href={card.link || "#"} // Link property for navigation
+        className="relative h-full w-full"
+      >
         <div className="absolute h-full top-0 inset-x-0 bg-gradient-to-b from-black/50 via-transparent to-transparent z-30 pointer-events-none" />
         <div className="relative z-40 p-8">
           <p className="text-white text-sm md:text-base font-medium font-sans text-left">
