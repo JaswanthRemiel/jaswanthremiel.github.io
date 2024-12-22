@@ -6,7 +6,8 @@ export default async function App() {
     <div>
       <h2 className="font-medium">tweets</h2>
       <br />
-      <div className="flex space-x-6">
+      {/* Use flex-col for mobile and flex-row for larger screens */}
+      <div className="flex flex-col space-y-6 md:flex-row md:space-x-6 md:space-y-0">
         <TweetCard id="1863464969867792601" />
         <TweetCard id="1755580236387823951" />
         <TweetCard id="1864292714067710305" />
