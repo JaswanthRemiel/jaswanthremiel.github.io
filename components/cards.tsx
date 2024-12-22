@@ -1,11 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
+import {
+  Carousel,
+  Card as ImportedCarouselCard,
+} from "@/components/ui/apple-cards-carousel";
 
 export function AppleCardsCarouselDemo() {
   const cards = data.map((card, index) => (
-    <Card key={card.src} card={card} index={index} />
+    <ImportedCarouselCard key={card.src} card={card} index={index} />
   ));
 
   return (
@@ -47,12 +50,18 @@ const Cards = () => {
   );
 };
 
-export const Card = ({
+export const LocalCarouselCard = ({
   card,
   index,
   layout = false,
 }: {
-  card: Card;
+  card: {
+    category: string;
+    title: string;
+    src: string;
+    content: JSX.Element;
+    link: string;
+  };
   index: number;
   layout?: boolean;
 }) => {
