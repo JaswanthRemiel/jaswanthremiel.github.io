@@ -4,6 +4,8 @@ import { Now } from "../components/now";
 import { Contact } from "../components/contact";
 import { Footer } from "../components/footer";
 import { Navbar } from "@/components/navBar";
+import TweetCard from "@/components/tweet-card";
+import { motion } from "framer-motion";
 
 export default function Page() {
   return (
@@ -12,6 +14,7 @@ export default function Page() {
         <Header />
         <Sections />
         <Now />
+        <TweetCard />
         <Contact />
       </main>
     </div>

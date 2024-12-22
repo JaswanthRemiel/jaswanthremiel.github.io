@@ -5,6 +5,10 @@ import Link from "next/link";
 import { ArrowIcon } from "./ArrowIcon";
 import * as links from "./details";
 
+import { Newsreader } from "next/font/google";
+
+const newsreader = Newsreader({ subsets: ["latin"], weight: ["300"] });
+
 export function Contact() {
   return (
     <motion.section
@@ -13,8 +17,8 @@ export function Contact() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.6 }}
     >
-      <h2 className="font-medium">Contact</h2>
-      <div className="space-y-6">
+      <h2 className="font-medium">contact</h2>
+      <div className={`${newsreader.className} space-y-6 text-gray-100`}>
         <p className="text-gray-400">
           The best way to reach me is via email:
           <Link

@@ -3,10 +3,8 @@ import * as links from "./details";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Newsreader } from "next/font/google";
-import { Roboto } from "next/font/google";
 
 const newsreader = Newsreader({ subsets: ["latin"], weight: ["300"] });
-const roboto = Roboto({ subsets: ["latin"], weight: ["400"] });
 
 export function Now() {
   return (
@@ -16,7 +14,7 @@ export function Now() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.4 }}
     >
-      <h2 className="font-medium">Now</h2>
+      <h2 className="font-medium">now</h2>
       <div className={`${newsreader.className} space-y-6 text-gray-100`}>
         <p>
           Currently juggling multiple hats (figuratively—I don&apos;t own many
