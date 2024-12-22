@@ -14,8 +14,8 @@ export default function Page() {
       <main className="flex-grow max-w-4xl mx-auto px-10 sm:px-6 py-20 space-y-12 w-full">
         <Header />
         <AppleCardsCarouselDemo />
-        <Sections />
         <Now />
+        <Sections />
         <TweetCard />
         <Contact />
       </main>
