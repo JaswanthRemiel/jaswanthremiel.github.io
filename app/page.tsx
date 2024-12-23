@@ -15,7 +15,6 @@ export default function Page() {
         <Header />
         <AppleCardsCarouselDemo />
         <Now />
-        <Sections />
         <TweetCard />
         <Contact />
       </main>

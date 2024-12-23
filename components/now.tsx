@@ -3,6 +3,7 @@ import * as links from "./details";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Newsreader } from "next/font/google";
+import { Sections } from "./sections";
 
 const newsreader = Newsreader({ subsets: ["latin"], weight: ["300"] });
 
@@ -46,6 +47,7 @@ export function Now() {
           amazing community while showcasing my passion for design, tech, and
           sometimes the occasional gaming session.
         </p>
+        <Sections />
       </div>
     </motion.section>
   );

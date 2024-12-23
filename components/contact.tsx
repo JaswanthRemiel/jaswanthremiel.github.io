@@ -17,25 +17,27 @@ export function Contact() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.6 }}
     >
-      <h2 className="font-medium">contact</h2>
-      <div className={`${newsreader.className} space-y-6 text-gray-100`}>
-        <p className="text-gray-400">
-          The best way to reach me is via email:
-          <Link
-            href="mailto:sayhi@remiel.fyi?subject=Hi there!"
-            className="group inline-flex items-center space-x-1 text-white hover:text-gray-300 transition-colors"
-          >
-            <br></br>
-            <span>sayhi@remiel.fyi</span>
-          </Link>{" "}
-          and{" "}
-          <Link
-            href={links.twitter}
-            className="group inline-flex items-center space-x-1 text-white hover:text-gray-300 transition-colors"
-          >
-            <span>@jrxag_official</span>
-          </Link>
-        </p>
+      <div className="space-y-4">
+        <h2 className="font-medium">contact</h2>
+        <div className={`${newsreader.className} space-y-6 text-gray-100`}>
+          <p className="text-gray-400">
+            The best way to reach me is via email:
+            <Link
+              href="mailto:sayhi@remiel.fyi?subject=Hi there!"
+              className="group inline-flex items-center space-x-1 text-white hover:text-gray-300 transition-colors"
+            >
+              <br></br>
+              <span>sayhi@remiel.fyi</span>
+            </Link>{" "}
+            and{" "}
+            <Link
+              href={links.twitter}
+              className="group inline-flex items-center space-x-1 text-white hover:text-gray-300 transition-colors"
+            >
+              <span>@jrxag_official</span>
+            </Link>
+          </p>
+        </div>
       </div>
     </motion.section>
   );

@@ -18,6 +18,16 @@ const nextConfig = {
         hostname: 'assets.aceternity.com',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'i.scdn.co',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'upload.wikimedia.org',
+        pathname: '/**',
+      },
     ],
   },
 };
