@@ -12,7 +12,7 @@ export function Sections() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.2 }}
     >
-      <div className="flex gap-0.5 w-[180%] md:w-full">
+      <div className="flex gap-0.2 w-[180%] md:w-full">
         <div className="w-full space-y-8">
           <h2 className="font-sm text-gray-400">projects</h2>
           <div className="space-y-6">
@@ -73,8 +73,7 @@ export function Sections() {
                 </motion.span>
               </Link>
               <p className="text-sm font-mono text-gray-400 mt-1">
-                generates meaningful summaries powered by hugging face's
-                facebook BART model.
+                generates meaningful summaries powered by facebook BART model.
               </p>
             </div>
             <div>

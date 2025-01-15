@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowIcon } from "./ArrowIcon";
 import * as links from "./details";
+import { Button } from "@/components/ui/button";
 
 import { Newsreader } from "next/font/google";
 
@@ -37,6 +38,11 @@ export function Contact() {
               <span>@jrxag_official</span>
             </Link>
           </p>
+        </div>
+        <div>
+          <Button variant="outline">
+            <Link href="/resume">Resume</Link>
+          </Button>
         </div>
       </div>
     </motion.section>
