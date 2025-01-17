@@ -73,7 +73,7 @@ export function Sections() {
                 </motion.span>
               </Link>
               <p className="text-sm font-mono text-gray-400 mt-1">
-                generates meaningful summaries powered by facebook BART model.
+                powered by facebook BART model.
               </p>
             </div>
             <div>
