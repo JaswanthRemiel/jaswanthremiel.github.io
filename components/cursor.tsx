@@ -4,6 +4,23 @@ import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence, useMotionValue } from "framer-motion";
 import { cn } from "@/utils/cn";
 
+// Custom hook for media query
+const useMediaQuery = (query: string) => {
+  const [matches, setMatches] = useState(false);
+
+  useEffect(() => {
+    const media = window.matchMedia(query);
+    if (media.matches !== matches) {
+      setMatches(media.matches);
+    }
+    const listener = () => setMatches(media.matches);
+    media.addEventListener("change", listener);
+    return () => media.removeEventListener("change", listener);
+  }, [matches, query]);
+
+  return matches;
+};
+
 export const Pointer = ({
   children,
   className,
@@ -19,11 +36,19 @@ export const Pointer = ({
   const [rect, setRect] = useState<DOMRect | null>(null);
   const [isInside, setIsInside] = useState<boolean>(false);
 
+  // Check if the screen is mobile
+  const isMobile = useMediaQuery("(max-width: 768px)");
+
   useEffect(() => {
     if (ref.current) {
       setRect(ref.current.getBoundingClientRect());
     }
   }, []);
+
+  // Do not render on mobile
+  if (isMobile) {
+    return <div className={className}>{children}</div>;
+  }
 
   return (
     <div
@@ -95,7 +120,7 @@ export const FollowPointer = ({
           <path d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z"></path>
         </svg>
         <div className="w-fit rounded-full bg-sky-500 px-2 py-1 text-white">
-          {name || "Tony"}
+          {name || "Remiel"}
         </div>
       </motion.div>
     </>
