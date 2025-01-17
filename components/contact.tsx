@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowIcon } from "./ArrowIcon";
 import * as links from "./details";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 import { Newsreader } from "next/font/google";
 
@@ -39,7 +40,14 @@ export function Contact() {
             </Link>
           </p>
         </div>
-        <div>
+        <div className="flex items-start">
+          <Image
+            src="/cat.gif"
+            alt="Jaswanth Remiel Logo"
+            width={40}
+            height={40}
+            className="mr-4"
+          />
           <Button variant="outline">
             <Link href="/resume">Resume</Link>
           </Button>

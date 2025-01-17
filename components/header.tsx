@@ -38,10 +38,10 @@ export function Header() {
       {/* Logo */}
       <div className="flex items-start">
         <Image
-          src="https://raw.githubusercontent.com/JaswanthRemiel/nextsam/refs/heads/main/public/logo.png"
+          src="/logo.png"
           alt="Jaswanth Remiel Logo"
-          width={40}
-          height={40}
+          width={100}
+          height={100}
           className="mr-4"
         />
       </div>
