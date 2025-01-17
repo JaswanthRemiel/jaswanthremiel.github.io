@@ -38,7 +38,7 @@ export function Header() {
       {/* Logo */}
       <div className="flex items-start">
         <Image
-          src="/logo.png"
+          src="/logo.svg"
           alt="Jaswanth Remiel Logo"
           width={100}
           height={100}
