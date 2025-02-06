@@ -108,7 +108,7 @@ export const TweetHeader = ({ tweet }: { tweet: EnrichedTweet }) => (
           alt={tweet.user.screen_name}
           height={48}
           width={48}
-          src={tweet.user.profile_image_url_https}
+          src="orange.png"
           className="overflow-hidden rounded-full border border-transparent"
         />
       </a>
