@@ -8,7 +8,7 @@ export default async function App() {
       <br />
       <div className="flex flex-col space-y-6 md:flex-row md:space-x-6 md:space-y-0">
         <TweetCard id="1863464969867792601" />
-        <TweetCard id="1863621285978259635" />
+        <TweetCard id="1863104783042871774" />
       </div>
     </div>
   );
