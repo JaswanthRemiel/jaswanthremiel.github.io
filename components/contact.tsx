@@ -20,7 +20,11 @@ export function Contact() {
       transition={{ duration: 0.5, delay: 0.6 }}
     >
       <div className="space-y-4">
-        <h2 className="font-medium">contact</h2>
+        <section
+          className={`${newsreader.className} bg-black text-white px-2 py-1 text-sm font-sm inline-flex items-center space-x-1 font-sm`}
+        >
+          contact
+        </section>
         <div className={`${newsreader.className} space-y-6 text-gray-100`}>
           <p className="text-gray-400">
             The best way to reach me is via email:
@@ -41,13 +45,6 @@ export function Contact() {
           </p>
         </div>
         <div className="flex items-start">
-          <Image
-            src="/cat.gif"
-            alt="Jaswanth Remiel Logo"
-            width={40}
-            height={40}
-            className="mr-4"
-          />
           <Button variant="outline">
             <Link href="/resume">Resume</Link>
           </Button>

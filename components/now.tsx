@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Newsreader } from "next/font/google";
 import { Sections } from "./sections";
+import { ArrowIcon } from "./ArrowIcon";
 
 const newsreader = Newsreader({ subsets: ["latin"], weight: ["300"] });
 
@@ -15,8 +16,14 @@ export function Now() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.4 }}
     >
-      <h2 className="font-medium">now</h2>
-      <div className={`${newsreader.className} space-y-6 text-gray-100`}>
+      <section
+        className={`${newsreader.className} font-sm bg-black text-white px-2 py-1 text-sm font-sm inline-flex items-center space-x-1 `}
+      >
+        <span>now</span>
+      </section>
+      <div
+        className={`${newsreader.className} text-justify space-y-6 text-gray-100`}
+      >
         <p>
           Currently juggling multiple hats (figuratively—I don&apos;t own many
           hats), I&apos;m diving deep into tech as a PRISM intern at Samsung R&D
