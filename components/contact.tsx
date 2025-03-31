@@ -46,11 +46,6 @@ export function Contact() {
             </Link>
           </p>
         </div>
-        <div className="flex items-start">
-          <Button>
-            <Link href="/resume">Resume</Link>
-          </Button>
-        </div>
       </div>
     </motion.section>
   );
