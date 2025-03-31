@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowIcon } from "./ArrowIcon";
 import * as links from "./details";
-// import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { Newsreader } from "next/font/google";
 import { Button } from "@/components/ui/3d-button";

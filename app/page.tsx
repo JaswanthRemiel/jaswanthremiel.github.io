@@ -5,7 +5,6 @@ import { Contact } from "../components/contact";
 import { Footer } from "../components/footer";
 import { Navbar } from "@/components/navBar";
 import { motion } from "framer-motion";
-import { AppleCardsCarouselDemo } from "@/components/cards";
 
 export default function Page() {
   return (

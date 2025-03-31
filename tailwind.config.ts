@@ -59,36 +59,13 @@ module.exports = {
 		  },
 		},
 		animation: {
-		  grid: 'grid 15s linear infinite',
-		  marquee: 'marquee var(--duration) infinite linear',
-		  'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
-		},
-		keyframes: {
-		  grid: {
-			'0%': {
-			  transform: 'translateY(-50%)',
-			},
-			'100%': {
-			  transform: 'translateY(0)',
-			},
+			marquee: 'marquee var(--duration, 30s) linear infinite'
 		  },
-		  marquee: {
-			from: {
-			  transform: 'translateX(0)',
-			},
-			to: {
-			  transform: 'translateX(calc(-100% - var(--gap)))',
-			},
+		  keyframes: {
+			marquee: {
+			  to: { transform: 'translateX(-50%)' }
+			}
 		  },
-		  'marquee-vertical': {
-			from: {
-			  transform: 'translateY(0)',
-			},
-			to: {
-			  transform: 'translateY(calc(-100% - var(--gap)))',
-			},
-		  },
-		},
 	  },
 	},
 	plugins: [require("tailwindcss-animate")],
