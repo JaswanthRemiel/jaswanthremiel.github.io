@@ -1,7 +1,7 @@
 "use client";
 
 import type React from "react";
-
+import { motion } from "framer-motion";
 import { useState, type MouseEvent } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -134,92 +134,99 @@ export default function ProjectCarousel({
   };
 
   return (
-    <div className="space-y-8">
-      <p
-        className={`${alegreya.className} bg-orange-500 text-black px-2 py-0.75 font-sm inline-flex items-center space-x-1 font-semibold`}
-      >
-        <span>projects</span>
-        <ArrowIcon />
-      </p>
+    <motion.section
+      className="overflow-x-auto pb-6 md:pb-0 md:overflow-x-visible"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      <div className="space-y-8">
+        <div
+          className={`${alegreya.className} bg-orange-500 text-black px-2 py-0.75 font-sm inline-flex items-center space-x-1 font-semibold`}
+        >
+          <span>projects</span>
+          <ArrowIcon />
+        </div>
 
-      <div
-        className="relative w-full overflow-hidden cursor-grab"
-        onMouseDown={handleDragStart}
-        onMouseMove={handleDragMove}
-        onMouseUp={handleDragEnd}
-        onMouseLeave={handleDragEnd}
-        onTouchStart={handleDragStart}
-        onTouchMove={handleDragMove}
-        onTouchEnd={handleDragEnd}
-        style={{ touchAction: "pan-y" }}
-      >
-        <div className="relative">
-          <div
-            className={cn(
-              "flex transition-transform duration-500 ease-out",
-              isDragging ? "transition-none" : ""
-            )}
-            style={{
-              transform: isDragging
-                ? `translateX(calc(-${
-                    currentSlide * 100
-                  }% + ${currentTranslate}px))`
-                : `translateX(-${currentSlide * 100}%)`,
-            }}
-          >
-            {Array.from({ length: totalSlides }).map((_, slideIndex) => {
-              const slideProjects = projects.slice(
-                slideIndex * projectsPerSlide,
-                slideIndex * projectsPerSlide + projectsPerSlide
-              );
+        <div
+          className="relative w-full overflow-hidden cursor-grab"
+          onMouseDown={handleDragStart}
+          onMouseMove={handleDragMove}
+          onMouseUp={handleDragEnd}
+          onMouseLeave={handleDragEnd}
+          onTouchStart={handleDragStart}
+          onTouchMove={handleDragMove}
+          onTouchEnd={handleDragEnd}
+          style={{ touchAction: "pan-y" }}
+        >
+          <div className="relative">
+            <div
+              className={cn(
+                "flex transition-transform duration-500 ease-out",
+                isDragging ? "transition-none" : ""
+              )}
+              style={{
+                transform: isDragging
+                  ? `translateX(calc(-${
+                      currentSlide * 100
+                    }% + ${currentTranslate}px))`
+                  : `translateX(-${currentSlide * 100}%)`,
+              }}
+            >
+              {Array.from({ length: totalSlides }).map((_, slideIndex) => {
+                const slideProjects = projects.slice(
+                  slideIndex * projectsPerSlide,
+                  slideIndex * projectsPerSlide + projectsPerSlide
+                );
 
-              return (
-                <div key={slideIndex} className="w-full flex gap-4 px-1">
-                  {slideProjects.map((project) => (
-                    <div
-                      className="w-[280px] h-auto flex-shrink-0"
-                      key={project.id}
-                      style={{ minWidth: "280px" }}
-                    >
-                      <Link
-                        href={project.projectUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block h-full"
-                        onClick={(e) => isDragging && e.preventDefault()}
+                return (
+                  <div key={slideIndex} className="w-full flex gap-4 px-1">
+                    {slideProjects.map((project) => (
+                      <div
+                        className="w-[280px] h-auto flex-shrink-0"
+                        key={project.id}
+                        style={{ minWidth: "280px" }}
                       >
-                        <Card className="h-full overflow-hidden transition-all duration-300 hover:shadow-md">
-                          <div className="relative h-32 overflow-hidden">
-                            <Image
-                              src={project.imageUrl || "/placeholder.svg"}
-                              alt={project.title}
-                              fill
-                              className="object-cover transition-transform duration-300 hover:scale-105"
-                              sizes="280px"
-                              draggable="false"
-                            />
-                          </div>
-                          <CardContent className="p-3">
-                            <h3 className="text-base font-bold mb-1 line-clamp-1">
-                              {project.title}
-                            </h3>
-                            <p className="text-xs text-muted-foreground line-clamp-2 mb-1">
-                              {project.description}
-                            </p>
-                            <div className="text-xs text-primary font-medium">
-                              View Project →
+                        <Link
+                          href={project.projectUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block h-full"
+                          onClick={(e) => isDragging && e.preventDefault()}
+                        >
+                          <Card className="h-full overflow-hidden transition-all duration-300 hover:shadow-md">
+                            <div className="relative h-32 overflow-hidden">
+                              <Image
+                                src={project.imageUrl || "/placeholder.svg"}
+                                alt={project.title}
+                                fill
+                                className="object-cover transition-transform duration-300 hover:scale-105"
+                                sizes="280px"
+                                draggable="false"
+                              />
                             </div>
-                          </CardContent>
-                        </Card>
-                      </Link>
-                    </div>
-                  ))}
-                </div>
-              );
-            })}
+                            <CardContent className="p-3">
+                              <h3 className="text-base font-bold mb-1 line-clamp-1">
+                                {project.title}
+                              </h3>
+                              <p className="text-xs text-muted-foreground line-clamp-2 mb-1">
+                                {project.description}
+                              </p>
+                              <div className="text-xs text-primary font-medium">
+                                View Project →
+                              </div>
+                            </CardContent>
+                          </Card>
+                        </Link>
+                      </div>
+                    ))}
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </motion.section>
   );
 }
