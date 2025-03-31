@@ -7,7 +7,10 @@ import * as links from "./details";
 import Image from "next/image";
 import { Newsreader } from "next/font/google";
 import { Button } from "@/components/ui/3d-button";
-
+import { Alegreya } from "next/font/google";
+const alegreya = Alegreya({
+  subsets: ["latin"],
+});
 const newsreader = Newsreader({ subsets: ["latin"] });
 
 export function Contact() {
@@ -20,7 +23,7 @@ export function Contact() {
     >
       <div className="space-y-4">
         <p
-          className={`${newsreader.className} bg-yellow-500 text-black font-semibold px-2 py-1  font-sm inline-flex items-center space-x-1 font-sm`}
+          className={`${alegreya.className} bg-orange-500 text-black px-2 py-0.75  font-sm inline-flex items-center space-x-1 font-semibold`}
         >
           contact
         </p>

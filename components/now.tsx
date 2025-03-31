@@ -5,7 +5,12 @@ import Link from "next/link";
 import { Newsreader } from "next/font/google";
 import { Sections } from "./sections";
 import { ArrowIcon } from "./ArrowIcon";
+import { Alegreya } from "next/font/google";
+
 const newsreader = Newsreader({
+  subsets: ["latin"],
+});
+const alegreya = Alegreya({
   subsets: ["latin"],
 });
 
@@ -17,8 +22,8 @@ export function Now() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.4 }}
     >
-      <section className="font-sm bg-yellow-500 text-black px-2 py-1 font-bold inline-flex items-center space-x-1">
-        <p className={`${newsreader.className} font-semibold `}>now</p>
+      <section className="font-sm bg-orange-500 text-black px-2 py-0.75 font-semibold inline-flex items-center space-x-1">
+        <p className={`${alegreya.className} font-semibold `}>now</p>
       </section>
       <div
         className={`${newsreader.className} font-light text-justify space-y-6 text-gray-100`}

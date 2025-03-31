@@ -4,6 +4,10 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ProjectItem } from "./projectitem";
 import { ArrowIcon } from "./ArrowIcon";
+import { Alegreya } from "next/font/google";
+const alegreya = Alegreya({
+  subsets: ["latin"],
+});
 
 export function Sections() {
   return (
@@ -15,7 +19,9 @@ export function Sections() {
     >
       <div className="flex flex-col md:flex-row gap-8 md:gap-12 w-full ">
         <div className="w-full space-y-8">
-          <section className="bg-yellow-500 text-black px-2 py-1  font-sm inline-flex items-center space-x-1 font-semibold">
+          <section
+            className={`${alegreya.className} bg-orange-500 text-black px-2 py-0.75  font-sm inline-flex items-center space-x-1 font-semibold`}
+          >
             <span>projects</span>
             <ArrowIcon />
           </section>
@@ -39,7 +45,9 @@ export function Sections() {
           </div>
         </div>
         <div className="w-full space-y-8">
-          <section className="bg-yellow-500 text-black px-2 py-1 font-sm inline-flex items-center space-x-1 font-semibold">
+          <section
+            className={`${alegreya.className} bg-orange-500 text-black px-2 py-0.75  font-sm inline-flex items-center space-x-1 font-semibold`}
+          >
             <span>writing</span>
             <ArrowIcon />
           </section>
