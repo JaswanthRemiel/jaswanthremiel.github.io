@@ -12,33 +12,33 @@ export default function InfiniteSliderBasic() {
       >
         <img
           src="./nextjs.jpeg"
-          alt="Apple Music logo"
+          alt="NEXTjs logo"
           className="h-[55px] w-auto"
         />
         <img
           src="./reactjs.jpeg"
-          alt="Chrome logo"
+          alt="REACTjs logo"
           className="h-[55px] w-auto"
         />
         <img
           src="./TailwindCSS.png"
-          alt="Strava logo"
+          alt="TailwindCSS logo"
           className="h-[55px] w-auto"
         />
         <img
           src="./typescript.png"
-          alt="Nintendo logo"
+          alt="TypeSCRIPT logo"
           className="h-[55px] w-auto"
         />
-        <img src="./nodejs.png" alt="Prada logo" className="h-[55px] w-auto" />
-        <img src="./vercel.png" alt="Prada logo" className="h-[55px] w-auto" />
-        <img src="./aws.png" alt="Prada logo" className="h-[55px] w-auto" />
+        <img src="./nodejs.png" alt="Nodejs logo" className="h-[55px] w-auto" />
+        <img src="./vercel.png" alt="vercel logo" className="h-[55px] w-auto" />
+        <img src="./aws.png" alt="AWS logo" className="h-[55px] w-auto" />
         <img
           src="./appwrite.png"
-          alt="Prada logo"
+          alt="APPWRITE logo"
           className="h-[55px] w-auto"
         />
-        <img src="./github.png" alt="Prada logo" className="h-[55px] w-auto" />
+        <img src="./github.png" alt="GITHUB logo" className="h-[55px] w-auto" />
       </InfiniteSlider>
     </div>
   );
