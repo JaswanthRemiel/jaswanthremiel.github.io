@@ -17,9 +17,9 @@ export function Now() {
       transition={{ duration: 0.5, delay: 0.4 }}
     >
       <section
-        className={`${newsreader.className} font-sm bg-black text-white px-2 py-1 text-sm font-sm inline-flex items-center space-x-1 `}
+        className={`${newsreader.className} font-sm bg-black text-white px-2 py-1  font-sm inline-flex items-center space-x-1 `}
       >
-        <span>now</span>
+        <p>now</p>
       </section>
       <div
         className={`${newsreader.className} text-justify space-y-6 text-gray-100`}

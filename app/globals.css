@@ -31,27 +31,24 @@
   }
 
   body {
-    @apply bg-background text-foreground;
-    /* Prevent horizontal scrolling */
-    @apply overflow-x-hidden;
+    @apply bg-background text-foreground overflow-x-hidden;
+    @apply text-base sm:text-lg md:text-xl; /* Increased font size */
   }
 
   /* Hide vertical scrollbar but keep scrolling on mobile */
   @media (max-width: 768px) {
     html,
     body {
-      height: 100%; /* Ensure full height for scrolling */
-      overflow-y: scroll; /* Enable scrolling */
+      height: 100%;
+      overflow-y: scroll;
     }
 
-    /* Hide the scrollbar but still allow scrolling */
     body::-webkit-scrollbar {
-      display: none; /* Hide the scrollbar in Webkit browsers (Chrome, Safari) */
+      display: none;
     }
 
-    /* For Firefox, hide the scrollbar but keep the ability to scroll */
     body {
-      scrollbar-width: none; /* Hide scrollbar in Firefox */
+      scrollbar-width: none;
     }
   }
 }

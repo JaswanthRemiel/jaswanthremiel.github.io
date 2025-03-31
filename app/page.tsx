@@ -9,8 +9,8 @@ import { AppleCardsCarouselDemo } from "@/components/cards";
 
 export default function Page() {
   return (
-    <div className="flex flex-col min-h-screen bg-[#1c1c1c] text-white">
-      <main className="flex-grow max-w-4xl mx-auto px-10 sm:px-6 py-20 space-y-12 w-full">
+    <div className="flex flex-col  bg-[#1c1c1c] text-white">
+      <main className="flex-grow max-w-5xl mx-auto px-12 sm:px-8 py-24 space-y-16 w-full">
         <Header />
         <Now />
         <Contact />

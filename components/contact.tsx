@@ -20,11 +20,11 @@ export function Contact() {
       transition={{ duration: 0.5, delay: 0.6 }}
     >
       <div className="space-y-4">
-        <section
-          className={`${newsreader.className} bg-black text-white px-2 py-1 text-sm font-sm inline-flex items-center space-x-1 font-sm`}
+        <p
+          className={`${newsreader.className} bg-black text-white px-2 py-1  font-sm inline-flex items-center space-x-1 font-sm`}
         >
           contact
-        </section>
+        </p>
         <div className={`${newsreader.className} space-y-6 text-gray-100`}>
           <p className="text-gray-400">
             The best way to reach me is via email:

@@ -15,7 +15,7 @@ export function Sections() {
     >
       <div className="flex flex-col md:flex-row gap-8 md:gap-12 w-full ">
         <div className="w-full space-y-8">
-          <section className="bg-black text-white px-2 py-1 text-sm font-sm inline-flex items-center space-x-1">
+          <section className="bg-black text-white px-2 py-1  font-sm inline-flex items-center space-x-1">
             <span>projects</span>
             <ArrowIcon />
           </section>
@@ -39,7 +39,7 @@ export function Sections() {
           </div>
         </div>
         <div className="w-full space-y-8">
-          <section className="bg-black text-white px-2 py-1 text-sm font-sm inline-flex items-center space-x-1">
+          <section className="bg-black text-white px-2 py-1 font-sm inline-flex items-center space-x-1">
             <span>writing</span>
             <ArrowIcon />
           </section>
