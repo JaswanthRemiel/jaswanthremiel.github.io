@@ -149,7 +149,7 @@ export default function ProjectCarousel({
         </div>
 
         <div
-          className="relative w-full overflow-hidden cursor-grab"
+          className="relative w-auto overflow-hidden cursor-grab"
           onMouseDown={handleDragStart}
           onMouseMove={handleDragMove}
           onMouseUp={handleDragEnd}
@@ -159,12 +159,9 @@ export default function ProjectCarousel({
           onTouchEnd={handleDragEnd}
           style={{ touchAction: "pan-y" }}
         >
-          <div className="relative">
+          <div>
             <div
-              className={cn(
-                "flex transition-transform duration-500 ease-out",
-                isDragging ? "transition-none" : ""
-              )}
+              className={cn("flex", isDragging ? "transition-none" : "")}
               style={{
                 transform: isDragging
                   ? `translateX(calc(-${
@@ -180,7 +177,7 @@ export default function ProjectCarousel({
                 );
 
                 return (
-                  <div key={slideIndex} className="w-full flex gap-4 px-1">
+                  <div key={slideIndex} className="w-auto flex gap-4 px-1">
                     {slideProjects.map((project) => (
                       <div
                         className="w-[280px] h-auto flex-shrink-0"
