@@ -9,7 +9,7 @@ import Image from "next/image";
 import { Newsreader } from "next/font/google";
 import { Button } from "@/components/ui/3d-button";
 
-const newsreader = Newsreader({ subsets: ["latin"], weight: ["300"] });
+const newsreader = Newsreader({ subsets: ["latin"] });
 
 export function Contact() {
   return (
@@ -21,11 +21,13 @@ export function Contact() {
     >
       <div className="space-y-4">
         <p
-          className={`${newsreader.className} bg-black text-white px-2 py-1  font-sm inline-flex items-center space-x-1 font-sm`}
+          className={`${newsreader.className} bg-yellow-500 text-black font-semibold px-2 py-1  font-sm inline-flex items-center space-x-1 font-sm`}
         >
           contact
         </p>
-        <div className={`${newsreader.className} space-y-6 text-gray-100`}>
+        <div
+          className={`${newsreader.className} font-light space-y-6 text-gray-100`}
+        >
           <p className="text-gray-400">
             The best way to reach me is via email:
             <Link

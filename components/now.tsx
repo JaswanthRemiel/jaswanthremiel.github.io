@@ -5,8 +5,9 @@ import Link from "next/link";
 import { Newsreader } from "next/font/google";
 import { Sections } from "./sections";
 import { ArrowIcon } from "./ArrowIcon";
-
-const newsreader = Newsreader({ subsets: ["latin"], weight: ["300"] });
+const newsreader = Newsreader({
+  subsets: ["latin"],
+});
 
 export function Now() {
   return (
@@ -16,13 +17,11 @@ export function Now() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.4 }}
     >
-      <section
-        className={`${newsreader.className} font-sm bg-black text-white px-2 py-1  font-sm inline-flex items-center space-x-1 `}
-      >
-        <p>now</p>
+      <section className="font-sm bg-yellow-500 text-black px-2 py-1 font-bold inline-flex items-center space-x-1">
+        <p className={`${newsreader.className} font-semibold `}>now</p>
       </section>
       <div
-        className={`${newsreader.className} text-justify space-y-6 text-gray-100`}
+        className={`${newsreader.className} font-light text-justify space-y-6 text-gray-100`}
       >
         <p>
           Currently juggling multiple hats (figuratively—I don&apos;t own many
