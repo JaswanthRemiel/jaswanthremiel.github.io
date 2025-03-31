@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowIcon } from "./ArrowIcon";
 import * as links from "./details";
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
 import Image from "next/image";
-
 import { Newsreader } from "next/font/google";
+import { Button } from "@/components/ui/3d-button";
 
 const newsreader = Newsreader({ subsets: ["latin"], weight: ["300"] });
 
@@ -45,7 +45,7 @@ export function Contact() {
           </p>
         </div>
         <div className="flex items-start">
-          <Button variant="outline">
+          <Button>
             <Link href="/resume">Resume</Link>
           </Button>
         </div>
