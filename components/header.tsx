@@ -11,7 +11,14 @@ import { Typewriter } from "./ui/typewriter";
 import { InfiniteSliderBasic } from "./InfiniteSliderBasic";
 import { AnimatedShinyText } from "./magicui/animated-shiny-text";
 import { cn } from "@/lib/utils";
-
+import { Inter } from "next/font/google";
+import { Alegreya } from "next/font/google";
+const Interf = Inter({
+  subsets: ["latin"],
+});
+const alegreya = Alegreya({
+  subsets: ["latin"],
+});
 const newsreader = Newsreader({ subsets: ["latin"], weight: ["300"] });
 
 export function Header() {
@@ -44,32 +51,38 @@ export function Header() {
           />
         </div>
         <div className="flex-col items-start space-y-2">
-          <p className={`${newsreader.className} text-gray-100 text-justify`}>
+          <p
+            className={`${Interf.className} text-gray-300 font-medium text-justify`}
+          >
             where art meets code, I create digital experiences that captivate
             and empower, merging aesthetic brilliance with cutting-edge
             technology. Every pixel and line of code is a deliberate stroke,
             shaping intuitive solutions that resonate with users.
           </p>
 
-          <p className={`${newsreader.className} text-gray-100 text-justify`}>
+          <p
+            className={`${Interf.className} text-gray-300 font-medium  text-justify`}
+          >
             as a Microsoft Learn Student Ambassador, I share my passion for
             technology and innovation through engaging content, inspiring a
             global community of creators on my channel,{" "}
             <Link
               href={links.youtube}
-              className="underline text-gray-100 decoration-gray-100"
+              className="underline text-gray-100 decoration-orange-600  "
             >
               remielgraphy
             </Link>
             .
           </p>
 
-          <p className={`${newsreader.className} text-justify`}>
+          <p
+            className={`${Interf.className} text-gray-300 font-medium text-justify`}
+          >
             checkout my{" "}
             <Link
               href={links.blog}
               target="_blank"
-              className="underline decoration-gray-400"
+              className="underline decoration-orange-600 text-gray-100  "
             >
               blog
             </Link>{" "}
@@ -77,7 +90,7 @@ export function Header() {
             <Link
               href={links.store}
               target="_blank"
-              className="underline decoration-gray-400"
+              className="underline decoration-orange-600 text-gray-100  "
             >
               store
             </Link>
@@ -85,7 +98,7 @@ export function Header() {
             <Link
               href={links.merch}
               target="_blank"
-              className="underline decoration-gray-400"
+              className="underline decoration-orange-600 text-gray-100  "
             >
               merch
             </Link>

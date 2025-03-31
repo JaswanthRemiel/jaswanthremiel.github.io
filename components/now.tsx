@@ -6,7 +6,10 @@ import { Newsreader } from "next/font/google";
 import { Sections } from "./sections";
 import { ArrowIcon } from "./ArrowIcon";
 import { Alegreya } from "next/font/google";
-
+import { Inter } from "next/font/google";
+const Interf = Inter({
+  subsets: ["latin"],
+});
 const newsreader = Newsreader({
   subsets: ["latin"],
 });
@@ -26,7 +29,7 @@ export function Now() {
         <p className={`${alegreya.className} font-semibold `}>now</p>
       </section>
       <div
-        className={`${newsreader.className} font-light text-justify space-y-6 text-gray-100`}
+        className={`${Interf.className}  text-justify space-y-6 text-gray-300`}
       >
         <p>
           Currently juggling multiple hats (figuratively—I don&apos;t own many
@@ -37,7 +40,7 @@ export function Now() {
           <Link
             href={links.youtube}
             target="_blank"
-            className="space-y-6 text-gray-100 underline decoration-gray-100"
+            className="space-y-6 text-gray-100 underline decoration-orange-600 "
           >
             Youtube
           </Link>{" "}
@@ -45,7 +48,7 @@ export function Now() {
           <Link
             href={links.twitter}
             target="_blank"
-            className="space-y-6 text-gray-100 underline decoration-gray-100"
+            className="space-y-6 text-gray-100 underline decoration-orange-600 "
           >
             Twitter
           </Link>
