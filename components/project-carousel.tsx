@@ -1,14 +1,14 @@
 "use client";
 
 import type React from "react";
-import { useState, useEffect, type MouseEvent } from "react";
+
+import { useState, type MouseEvent } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Card, CardContent } from "@/components/ui/card";
 import { Alegreya } from "next/font/google";
 import { ArrowIcon } from "./ArrowIcon";
-
 const alegreya = Alegreya({
   subsets: ["latin"],
 });
@@ -25,7 +25,7 @@ interface Project {
 const sampleProjects: Project[] = [
   {
     id: "1",
-    title: "AI-text-Summarizer",
+    title: " AI-text-Summarizer",
     description:
       "AI Text Summarizer is a Node.js-based server-side rendering application designed to provide users with concise summaries of lengthy texts. Leveraging the advanced capabilities of Hugging Face's Facebook BART model, ",
     imageUrl: "/aisummarize.png?height=400&width=600",
@@ -64,45 +64,26 @@ interface ProjectCarouselProps {
 export default function ProjectCarousel({
   projects = sampleProjects,
 }: ProjectCarouselProps) {
-  // State to hold the number of projects per slide
-  const [projectsPerSlide, setProjectsPerSlide] = useState(3);
+  // Calculate how many projects to show per slide
+  const projectsPerSlide = 3;
 
   // Calculate total number of slides
   const totalSlides = Math.ceil(projects.length / projectsPerSlide);
 
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Drag-related state variables
+  // Add these drag-related state variables
   const [isDragging, setIsDragging] = useState(false);
   const [startPosition, setStartPosition] = useState(0);
   const [currentTranslate, setCurrentTranslate] = useState(0);
   const [prevTranslate, setPrevTranslate] = useState(0);
 
-  // Function to calculate projects per slide based on screen width
-  const calculateProjectsPerSlide = () => {
-    if (window.innerWidth < 640) {
-      setProjectsPerSlide(1); // Mobile view
-    } else if (window.innerWidth < 1024) {
-      setProjectsPerSlide(2); // Tablet view
-    } else {
-      setProjectsPerSlide(3); // Desktop view
-    }
-  };
-
-  useEffect(() => {
-    calculateProjectsPerSlide();
-    window.addEventListener("resize", calculateProjectsPerSlide);
-    return () =>
-      window.removeEventListener("resize", calculateProjectsPerSlide);
-  }, []);
-
   // Navigate to specific slide
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
-    setCurrentTranslate(-(index * 100));
-    setPrevTranslate(-(index * 100));
   };
 
+  // Remove the existing touch event handlers and replace with these drag handlers
   const handleDragStart = (
     e: MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>
   ) => {
@@ -149,22 +130,17 @@ export default function ProjectCarousel({
     if (newSlide < 0) newSlide = 0;
     if (newSlide >= totalSlides) newSlide = totalSlides - 1;
 
-    // Snap back if the drag distance is not significant
-    if (Math.abs(currentTranslate - prevTranslate) < threshold) {
-      goToSlide(currentSlide);
-    } else {
-      goToSlide(newSlide);
-    }
+    goToSlide(newSlide);
   };
 
   return (
     <div className="space-y-8">
-      <div
+      <p
         className={`${alegreya.className} bg-orange-500 text-black px-2 py-0.75 font-sm inline-flex items-center space-x-1 font-semibold`}
       >
         <span>projects</span>
         <ArrowIcon />
-      </div>
+      </p>
 
       <div
         className="relative w-full overflow-hidden cursor-grab"
@@ -201,8 +177,9 @@ export default function ProjectCarousel({
                 <div key={slideIndex} className="w-full flex gap-4 px-1">
                   {slideProjects.map((project) => (
                     <div
-                      className="w-full md:w-[280px] flex-shrink-0"
+                      className="w-[280px] h-auto flex-shrink-0"
                       key={project.id}
+                      style={{ minWidth: "280px" }}
                     >
                       <Link
                         href={project.projectUrl}
@@ -218,7 +195,7 @@ export default function ProjectCarousel({
                               alt={project.title}
                               fill
                               className="object-cover transition-transform duration-300 hover:scale-105"
-                              sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 280px"
+                              sizes="280px"
                               draggable="false"
                             />
                           </div>
