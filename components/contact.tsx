@@ -12,6 +12,10 @@ const alegreya = Alegreya({
   subsets: ["latin"],
 });
 const newsreader = Newsreader({ subsets: ["latin"] });
+import { Inter } from "next/font/google";
+const Interf = Inter({
+  subsets: ["latin"],
+});
 
 export function Contact() {
   return (
@@ -28,7 +32,7 @@ export function Contact() {
           contact
         </p>
         <div
-          className={`${newsreader.className} font-light space-y-6 text-gray-100`}
+          className={`${Interf.className} font-light space-y-6 text-gray-100`}
         >
           <p className="text-gray-400">
             The best way to reach me is via email:
