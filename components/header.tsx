@@ -11,8 +11,8 @@ import { Typewriter } from "./ui/typewriter";
 import { InfiniteSliderBasic } from "./InfiniteSliderBasic";
 import { AnimatedShinyText } from "./magicui/animated-shiny-text";
 import { cn } from "@/lib/utils";
-import { Inter } from "next/font/google";
 import { Alegreya } from "next/font/google";
+import { Inter } from "next/font/google";
 const Interf = Inter({
   subsets: ["latin"],
 });
@@ -30,6 +30,7 @@ export function Header() {
       transition={{ duration: 0.5 }}
     >
       <div className="flex-col items-start space-y-5">
+        <img src="./Vector.svg" alt="porto logo" className="h-[45px] w-auto" />
         <div className="whitespace-pre-wrap text-2xl font-sm">
           <p className="text-gray-100">{"hi i'm remiel"}</p>
           <Typewriter
