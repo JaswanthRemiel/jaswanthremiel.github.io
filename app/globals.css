@@ -32,7 +32,7 @@
 
   body {
     @apply bg-background text-foreground overflow-x-hidden;
-    @apply text-sm sm:text-lg md:text-xl; /* Increased font size */
+    @apply text-sm sm:text-sm md:text-lg; 
   }
 
   /* Hide vertical scrollbar but keep scrolling on mobile */
