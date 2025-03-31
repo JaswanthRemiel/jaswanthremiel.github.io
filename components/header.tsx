@@ -23,8 +23,8 @@ const newsreader = Newsreader({ subsets: ["latin"], weight: ["300"] });
 
 export function Header() {
   return (
-    <motion.header
-      className="space-y-4"
+    <motion.section
+      className="overflow-x-auto pb-6 md:pb-0 md:overflow-x-visible"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -107,6 +107,6 @@ export function Header() {
           </p>
         </div>
       </div>
-    </motion.header>
+    </motion.section>
   );
 }

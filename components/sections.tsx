@@ -12,17 +12,17 @@ const alegreya = Alegreya({
 export function Sections() {
   return (
     <motion.section
-      className="overflow-x-auto pb-6 md:pb-0 md:overflow-x-visible"
+      className="overflow-x-auto pb-6 md:pb-0 md:overflow-x-visible space-x-8"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: 0.2 }}
+      transition={{ duration: 0.5 }}
     >
       <div className="flex flex-col md:flex-row gap-8 md:gap-12 w-full ">
         <div className="w-full space-y-8">
           <section
             className={`${alegreya.className} bg-orange-500 text-black px-2 py-0.75  font-sm inline-flex items-center space-x-1 font-semibold`}
           >
-            <span>projects</span>
+            <span>writing</span>
             <ArrowIcon />
           </section>
 
@@ -48,7 +48,7 @@ export function Sections() {
           <section
             className={`${alegreya.className} bg-orange-500 text-black px-2 py-0.75  font-sm inline-flex items-center space-x-1 font-semibold`}
           >
-            <span>writing</span>
+            <span>some more ..</span>
             <ArrowIcon />
           </section>
           <div className="space-y-6">
