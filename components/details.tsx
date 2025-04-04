@@ -20,7 +20,7 @@ export const projects: Project[] = [
     title: "AI-text-Summarizer",
     description:
       "AI Text Summarizer is a Node.js-based server-side rendering application designed to provide users with concise summaries of lengthy texts.",
-    imageUrl: "/aisummarize.png?height=400&width=600",
+    imageUrl: "/aisummarize.webp?height=400&width=600",
     projectUrl: "http://remiel.fyi/ai-summarizer",
   },
   {
@@ -28,7 +28,7 @@ export const projects: Project[] = [
     title: "Batmode Chrome Web Extension",
     description:
       "Batmode is a Chrome extension that instantly enables dark mode across any website, giving your eyes the comfort they deserve.",
-    imageUrl: "/batmode.png?height=400&width=600",
+    imageUrl: "/batmode.webp?height=400&width=600",
     projectUrl: "http://remiel.fyi/batmode",
   },
   {
@@ -36,7 +36,7 @@ export const projects: Project[] = [
     title: "CryptoCAT NFT",
     description:
       "CryptoCat NFT is a specialized Twitter bot with a paw firmly placed in the rapidly evolving world of Non-Fungible Tokens (NFTs).",
-    imageUrl: "/cryptocat.png?height=400&width=600",
+    imageUrl: "/cryptocat.webp?height=400&width=600",
     projectUrl: "http://remiel.fyi/cryptocat/",
   },
   {
@@ -44,7 +44,7 @@ export const projects: Project[] = [
     title: "LinkDescrip AI",
     description:
       "LinkDescrip AI is a web application that helps users generate optimized LinkedIn headlines based on their professional bios.",
-    imageUrl: "/linkdescrip.png?height=400&width=600",
+    imageUrl: "/linkdescrip.webp?height=400&width=600",
     projectUrl: "https://linkdescrip-ai.vercel.app/",
   },
   {
@@ -52,7 +52,7 @@ export const projects: Project[] = [
     title: "Multimodal Classficition Web App using Hybrid Models",
     description:
       "A multimodal classification project combining text and image processing. Includes pre-trained models and a streamlined interface for inference.",
-    imageUrl: "/multimodel.png?height=400&width=600",
+    imageUrl: "/multimodel.webp?height=400&width=600",
     projectUrl: "https://github.com/JaswanthRemiel/MultiModelClassification",
   },
 ];
