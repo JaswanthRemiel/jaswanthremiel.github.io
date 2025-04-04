@@ -30,7 +30,7 @@ export function Header() {
       transition={{ duration: 0.5 }}
     >
       <div className="flex-col items-start space-y-5">
-        <img src="./Vector.svg" alt="porto logo" className="h-[45px] w-auto" />
+        <img src="./Logo1.png" alt="porto logo" className="h-[60px] w-auto" />
         <div className="whitespace-pre-wrap text-2xl font-sm">
           <p className="text-gray-100">{"hi i'm remiel"}</p>
           <Typewriter
