@@ -18,43 +18,43 @@ export default function InfiniteSliderBasic() {
           className="w-full h-full"
         >
           <img
-            src="/nextjs.jpeg"
+            src="/nextjs.webp"
             alt="NEXT.js logo"
             className="h-[55px] w-auto"
           />
           <img
-            src="/reactjs.jpeg"
+            src="/reactjs.webp"
             alt="REACT.js logo"
             className="h-[55px] w-auto"
           />
           <img
-            src="/TailwindCSS.png"
+            src="/TailwindCSS.webp"
             alt="TailwindCSS logo"
             className="h-[55px] w-auto"
           />
           <img
-            src="/typescript.png"
+            src="/typescript.webp"
             alt="TypeScript logo"
             className="h-[55px] w-auto"
           />
           <img
-            src="/nodejs.png"
+            src="/nodejs.webp"
             alt="Node.js logo"
             className="h-[55px] w-auto"
           />
           <img
-            src="/vercel.png"
+            src="/vercel.webp"
             alt="Vercel logo"
             className="h-[55px] w-auto"
           />
-          <img src="/aws.png" alt="AWS logo" className="h-[55px] w-auto" />
+          <img src="/aws.webp" alt="AWS logo" className="h-[55px] w-auto" />
           <img
-            src="/appwrite.png"
+            src="/appwrite.webp"
             alt="Appwrite logo"
             className="h-[55px] w-auto"
           />
           <img
-            src="/github.png"
+            src="/github.webp"
             alt="GitHub logo"
             className="h-[55px] w-auto"
           />
