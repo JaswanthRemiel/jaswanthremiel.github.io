@@ -9,6 +9,7 @@ import { Alegreya } from "next/font/google";
 import { Inter } from "next/font/google";
 const Interf = Inter({
   subsets: ["latin"],
+  weight: "500",
 });
 const newsreader = Newsreader({
   subsets: ["latin"],

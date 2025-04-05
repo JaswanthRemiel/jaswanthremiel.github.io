@@ -7,7 +7,7 @@ import { Inter } from "next/font/google";
 import { SpinningText } from "@/components/ui/spinning-text";
 
 const alegreya = Alegreya({ subsets: ["latin"] });
-const Interf = Inter({ subsets: ["latin"] });
+const Interf = Inter({ subsets: ["latin"], weight: "500" });
 
 export function Contact() {
   return (
