@@ -36,7 +36,7 @@ export function Header() {
           <p className="text-gray-100">{"hi i'm remiel"}</p>
           <Typewriter
             text={[
-              "a fullstack developer from india.",
+              "a fullstack developer.",
               "a cracked designer.",
               "I build worlds.",
               "turning ideas alive.",
