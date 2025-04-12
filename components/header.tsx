@@ -38,12 +38,9 @@ export function Header() {
             text={[
               "a fullstack developer from india.",
               "a cracked designer.",
-              "crafting art through code, design, and sound.",
-              "a creator shaping digital and sonic worlds.",
-              "designing, coding, and composing the extraordinary.",
-              "blending tech, art, and rhythm into one.",
-              "building, designing, and making waves.",
-              "turning imagination into digital reality.",
+              "I build worlds.",
+              "turning ideas alive.",
+              "by day, code. by night, art.",
             ]}
             speed={70}
             className="text-orange-500"
