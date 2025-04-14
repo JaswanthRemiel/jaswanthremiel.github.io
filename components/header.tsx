@@ -14,6 +14,9 @@ import { cn } from "@/lib/utils";
 import { Alegreya } from "next/font/google";
 import { Inter } from "next/font/google";
 import ThemeToggle from "@/components/ui/dark-but";
+import useTheme from "@/hooks/useTheme";
+import { CloudSun } from "lucide-react";
+import { Moon } from "lucide-react";
 
 const Interf = Inter({
   subsets: ["latin"],
@@ -25,6 +28,7 @@ const alegreya = Alegreya({
 const newsreader = Newsreader({ subsets: ["latin"], weight: ["300"] });
 
 export function Header() {
+  const { theme, toggleTheme } = useTheme();
   return (
     <motion.section
       className="overflow-x-auto pb-6 md:pb-0 md:overflow-x-visible"
@@ -33,8 +37,13 @@ export function Header() {
       transition={{ duration: 0.5 }}
     >
       <div className="flex-col items-start space-y-4">
-        {/* <img src="./Logo.webp" alt="porto logo" className="h-[60px] w-auto" /> */}
-        <ThemeToggle />
+        <button
+          onClick={toggleTheme}
+          className="p-2 rounded border
+        "
+        >
+          {theme === "light" ? "Dark" : "Light"}
+        </button>
         <div className="whitespace-pre-wrap text-2xl font-sm">
           <p className="text-gray-100 dark:text-black">{"hi i'm remiel"}</p>
           <Typewriter
