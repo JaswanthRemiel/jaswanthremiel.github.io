@@ -33,10 +33,11 @@
 
   body {
     @apply bg-background text-foreground overflow-x-hidden;
-    @apply text-sm sm:text-sm md:text-lg mx-10 sm:mx-5; 
+    @apply text-sm sm:text-sm md:text-lg mx-10;
   }
 
   @media (max-width: 768px) {
+
     html,
     body {
       height: 100%;
@@ -57,8 +58,8 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
 }
-
