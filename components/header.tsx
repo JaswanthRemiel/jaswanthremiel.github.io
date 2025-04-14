@@ -15,8 +15,7 @@ import { Alegreya } from "next/font/google";
 import { Inter } from "next/font/google";
 import ThemeToggle from "@/components/ui/dark-but";
 import useTheme from "@/hooks/useTheme";
-import { CloudSun } from "lucide-react";
-import { Moon } from "lucide-react";
+import { Lightbulb, LightbulbOff } from "lucide-react";
 
 const Interf = Inter({
   subsets: ["latin"],
@@ -37,29 +36,34 @@ export function Header() {
       transition={{ duration: 0.5 }}
     >
       <div className="flex-col items-start space-y-4">
-        <button
-          onClick={toggleTheme}
-          className="bg-orange-500 dark:text-white text-black px-2 py-0.75  font-sm inline-flex items-center space-x-1 font-semibold"
-        >
-          {theme === "light" ? "Light" : "Dark"}
-        </button>
-        <div className="whitespace-pre-wrap text-2xl font-sm">
-          <p className="text-gray-100 dark:text-black">{"hi i'm remiel"}</p>
-          <Typewriter
-            text={[
-              "a fullstack developer.",
-              "a cracked designer.",
-              "I build worlds.",
-              "turning ideas alive.",
-              "by day, code. by night, art.",
-            ]}
-            speed={70}
-            className="text-orange-500"
-            waitTime={1500}
-            deleteSpeed={40}
-            cursorChar={"_"}
-          />
+        <div className="flex items-center justify-between">
+          <div className="whitespace-pre-wrap text-2xl font-sm">
+            <p className="text-gray-100 dark:text-black">{"hi i'm remiel"}</p>
+            <Typewriter
+              text={[
+                "a fullstack developer.",
+                "a cracked designer.",
+                "I build worlds.",
+                "turning ideas alive.",
+                "by day, code. by night, art.",
+              ]}
+              speed={70}
+              className="text-orange-500"
+              waitTime={1500}
+              deleteSpeed={40}
+              cursorChar={"_"}
+            />
+          </div>
+          <div className="ml-auto">
+            <button
+              onClick={toggleTheme}
+              className="text-gray-500 dark:text-orange-600"
+            >
+              {theme === "light" ? <Lightbulb /> : <LightbulbOff />}
+            </button>
+          </div>
         </div>
+
         <div className="flex-col items-start space-y-2">
           <p
             className={`${Interf.className} text-gray-300 dark:text-gray-950 font-medium text-justify`}

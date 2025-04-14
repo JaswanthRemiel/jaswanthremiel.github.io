@@ -32,10 +32,9 @@
 
   body {
     @apply bg-background text-foreground overflow-x-hidden;
-    @apply text-sm sm:text-sm md:text-lg; 
+    @apply text-sm sm:text-sm md:text-lg mx-10 sm:mx-5; 
   }
 
-  /* Hide vertical scrollbar but keep scrolling on mobile */
   @media (max-width: 768px) {
     html,
     body {
