@@ -2,9 +2,9 @@
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
 import { motion } from "framer-motion";
 
-export default function InfiniteSliderBasic() {
+export default function Skills() {
   return (
-    <div className="flex-col justify space-y-5">
+    <div className="flex-col justify space-y-5 dark:hidden">
       <motion.section
         className="space-y-8"
         initial={{ opacity: 0, y: 20 }}

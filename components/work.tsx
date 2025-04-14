@@ -3,8 +3,15 @@ import * as links from "./details";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Newsreader } from "next/font/google";
-import { Sections } from "./sections";
+import { WritingColumn } from "./writingcolumn";
 import { ArrowIcon } from "./ArrowIcon";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@/components/ui/accordion";
+
 import { Alegreya } from "next/font/google";
 import { Inter } from "next/font/google";
 const Interf = Inter({
@@ -18,7 +25,7 @@ const alegreya = Alegreya({
   subsets: ["latin"],
 });
 
-export function Now() {
+export function Work() {
   return (
     <motion.section
       className="space-y-8"
@@ -27,10 +34,11 @@ export function Now() {
       transition={{ duration: 0.5 }}
     >
       <section className="font-sm bg-orange-500 dark:text-white text-black px-2 py-0.75 font-semibold inline-flex items-center space-x-1">
-        <p className={`${alegreya.className} font-semibold `}>now</p>
+        <span className={`${alegreya.className} font-semibold `}>work</span>
+        <ArrowIcon />
       </section>
       <div
-        className={`${Interf.className} dark:text-gray-950 text-justify space-y-6 text-gray-300`}
+        className={`${Interf.className} dark:text-gray-700 text-justify space-y-6 text-gray-300`}
       >
         <p>
           currently juggling multiple hats (figuratively—I don&apos;t own many
@@ -54,13 +62,6 @@ export function Now() {
             Twitter
           </Link>
           , if you&apos;re curious.
-        </p>
-        <p>
-          between debugging code and brainstorming the next viral tweet or
-          video, I like to keep things fun. exploring content creation and
-          storytelling has become a creative outlet, letting me connect with an
-          amazing community while showcasing my passion for design, tech, and
-          sometimes the occasional gaming session.
         </p>
       </div>
     </motion.section>

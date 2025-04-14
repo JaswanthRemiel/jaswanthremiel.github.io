@@ -1,16 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import HyperText from "@/components/ui/hyper-text";
 import Link from "next/link";
-import Image from "next/image";
 import * as links from "./details";
 import { Newsreader } from "next/font/google";
-import { LinksComponent } from "./linkscomponent";
 import { Typewriter } from "./ui/typewriter";
-import { InfiniteSliderBasic } from "./InfiniteSliderBasic";
-import { AnimatedShinyText } from "./magicui/animated-shiny-text";
-import { cn } from "@/lib/utils";
 import { Alegreya } from "next/font/google";
 import { Inter } from "next/font/google";
 import ThemeToggle from "@/components/ui/dark-but";
@@ -38,7 +32,7 @@ export function Header() {
       <div className="flex-col items-start space-y-4">
         <div className="flex items-center justify-between">
           <div className="whitespace-pre-wrap text-2xl font-sm">
-            <p className="text-gray-100 dark:text-black">{"hi i'm remiel"}</p>
+            <p className="text-gray-100 dark:text-black ">{"hi i'm remiel"}</p>
             <Typewriter
               text={[
                 "a fullstack developer.",
@@ -66,37 +60,31 @@ export function Header() {
 
         <div className="flex-col items-start space-y-2">
           <p
-            className={`${Interf.className} text-gray-300 dark:text-gray-950 font-medium text-justify`}
+            className={`${Interf.className}  text-gray-300 dark:text-gray-700 font-medium text-justify`}
           >
-            where art meets code, I create digital experiences that captivate
-            and empower, merging aesthetic brilliance with cutting-edge
-            technology. Every pixel and line of code is a deliberate stroke,
-            shaping intuitive solutions that resonate with users.
-          </p>
-
-          <p
-            className={`${Interf.className} text-gray-300 dark:text-gray-950 font-medium  text-justify`}
-          >
-            as a Microsoft Learn Student Ambassador, I share my passion for
-            technology and innovation through engaging content, inspiring a
-            global community of creators on my channel,{" "}
+            I fuse art and technology to craft immersive digital experiences,
+            where every pixel and line of code is a deliberate stroke of
+            creativity, delivering intuitive solutions that inspire and empower
+            users; as a microsoft learn student ambassador, i channel my passion
+            for innovation into engaging content on{" "}
             <Link
               href={links.youtube}
-              className="underline text-gray-100 dark:text-gray-800 decoration-orange-600  "
+              className="underline decoration-orange-600 dark:text-black"
+              target="_blank"
             >
               remielgraphy
             </Link>
-            .
+            , sparking curiosity and empowering a global community of creators.
           </p>
 
           <p
-            className={`${Interf.className} text-gray-300 dark:text-gray-800 font-medium text-justify`}
+            className={`${Interf.className} text-gray-300 dark:text-gray-700 font-medium text-justify`}
           >
             checkout my{" "}
             <Link
               href={links.blog}
               target="_blank"
-              className="underline decoration-orange-600 text-gray-100 dark:text-gray-800  "
+              className="underline decoration-orange-600 text-gray-100 dark:text-black  "
             >
               blog
             </Link>{" "}
@@ -104,7 +92,7 @@ export function Header() {
             <Link
               href={links.store}
               target="_blank"
-              className="underline decoration-orange-600 text-gray-100 dark:text-gray-800  "
+              className="underline decoration-orange-600 text-gray-100 dark:text-black  "
             >
               store
             </Link>
@@ -112,7 +100,7 @@ export function Header() {
             <Link
               href={links.merch}
               target="_blank"
-              className="underline decoration-orange-600 text-gray-100 dark:text-gray-800  "
+              className="underline decoration-orange-600 text-gray-100 dark:text-black  "
             >
               merch
             </Link>

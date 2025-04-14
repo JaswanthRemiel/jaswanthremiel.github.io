@@ -14,7 +14,7 @@ const alegreya = Alegreya({
   subsets: ["latin"],
 });
 
-export default function ProjectCarousel() {
+export default function Projects() {
   const [emblaRef] = useEmblaCarousel({
     loop: false,
     align: "start",

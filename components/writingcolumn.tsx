@@ -9,7 +9,7 @@ const alegreya = Alegreya({
   subsets: ["latin"],
 });
 
-export function Sections() {
+export function WritingColumn() {
   return (
     <motion.section
       className="overflow-x-auto pb-6 md:pb-0 md:overflow-x-visible space-x-8"

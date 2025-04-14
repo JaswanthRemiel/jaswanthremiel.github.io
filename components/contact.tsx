@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Alegreya } from "next/font/google";
 import { Inter } from "next/font/google";
 import { SpinningText } from "@/components/ui/spinning-text";
+import { ArrowIcon } from "./ArrowIcon";
 
 const alegreya = Alegreya({ subsets: ["latin"] });
 const Interf = Inter({ subsets: ["latin"], weight: "500" });
@@ -19,11 +20,12 @@ export function Contact() {
     >
       <div className="space-y-6">
         <div className="space-y-4">
-          <p
+          <div
             className={`${alegreya.className} bg-orange-500 dark:text-white text-black px-2 py-1 font-medium inline-flex items-center space-x-1`}
           >
-            contact
-          </p>
+            <span>contact</span>
+            <ArrowIcon />
+          </div>
         </div>
 
         <div
