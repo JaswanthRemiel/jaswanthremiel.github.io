@@ -32,7 +32,7 @@ export function Header() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="flex-col items-start space-y-5">
+      <div className="flex-col items-start space-y-4">
         {/* <img src="./Logo.webp" alt="porto logo" className="h-[60px] w-auto" /> */}
         <ThemeToggle />
         <div className="whitespace-pre-wrap text-2xl font-sm">
