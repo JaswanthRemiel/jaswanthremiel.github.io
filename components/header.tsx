@@ -39,7 +39,6 @@ export function Header() {
                 "a cracked designer.",
                 "I build worlds.",
                 "turning ideas alive.",
-                "by day, code. by night, art.",
               ]}
               speed={70}
               className="text-orange-500"
