@@ -13,6 +13,8 @@ import { AnimatedShinyText } from "./magicui/animated-shiny-text";
 import { cn } from "@/lib/utils";
 import { Alegreya } from "next/font/google";
 import { Inter } from "next/font/google";
+import ThemeToggle from "@/components/ui/dark-but";
+
 const Interf = Inter({
   subsets: ["latin"],
   weight: "500",
@@ -31,9 +33,10 @@ export function Header() {
       transition={{ duration: 0.5 }}
     >
       <div className="flex-col items-start space-y-5">
-        <img src="./Logo.webp" alt="porto logo" className="h-[60px] w-auto" />
+        {/* <img src="./Logo.webp" alt="porto logo" className="h-[60px] w-auto" /> */}
+        <ThemeToggle />
         <div className="whitespace-pre-wrap text-2xl font-sm">
-          <p className="text-gray-100">{"hi i'm remiel"}</p>
+          <p className="text-gray-100 dark:text-black">{"hi i'm remiel"}</p>
           <Typewriter
             text={[
               "a fullstack developer.",
@@ -51,7 +54,7 @@ export function Header() {
         </div>
         <div className="flex-col items-start space-y-2">
           <p
-            className={`${Interf.className} text-gray-300 font-medium text-justify`}
+            className={`${Interf.className} text-gray-300 dark:text-gray-950 font-medium text-justify`}
           >
             where art meets code, I create digital experiences that captivate
             and empower, merging aesthetic brilliance with cutting-edge
@@ -60,14 +63,14 @@ export function Header() {
           </p>
 
           <p
-            className={`${Interf.className} text-gray-300 font-medium  text-justify`}
+            className={`${Interf.className} text-gray-300 dark:text-gray-950 font-medium  text-justify`}
           >
             as a Microsoft Learn Student Ambassador, I share my passion for
             technology and innovation through engaging content, inspiring a
             global community of creators on my channel,{" "}
             <Link
               href={links.youtube}
-              className="underline text-gray-100 decoration-orange-600  "
+              className="underline text-gray-100 dark:text-gray-800 decoration-orange-600  "
             >
               remielgraphy
             </Link>
@@ -75,13 +78,13 @@ export function Header() {
           </p>
 
           <p
-            className={`${Interf.className} text-gray-300 font-medium text-justify`}
+            className={`${Interf.className} text-gray-300 dark:text-gray-800 font-medium text-justify`}
           >
             checkout my{" "}
             <Link
               href={links.blog}
               target="_blank"
-              className="underline decoration-orange-600 text-gray-100  "
+              className="underline decoration-orange-600 text-gray-100 dark:text-gray-800  "
             >
               blog
             </Link>{" "}
@@ -89,7 +92,7 @@ export function Header() {
             <Link
               href={links.store}
               target="_blank"
-              className="underline decoration-orange-600 text-gray-100  "
+              className="underline decoration-orange-600 text-gray-100 dark:text-gray-800  "
             >
               store
             </Link>
@@ -97,7 +100,7 @@ export function Header() {
             <Link
               href={links.merch}
               target="_blank"
-              className="underline decoration-orange-600 text-gray-100  "
+              className="underline decoration-orange-600 text-gray-100 dark:text-gray-800  "
             >
               merch
             </Link>

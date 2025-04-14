@@ -17,33 +17,29 @@ export function Contact() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.6 }}
     >
-      {/* Left Section: Contact Info */}
       <div className="space-y-6">
-        {/* Header */}
         <div className="space-y-4">
           <p
-            className={`${alegreya.className} bg-orange-500 text-black px-2 py-1 font-medium inline-flex items-center space-x-1`}
+            className={`${alegreya.className} bg-orange-500 dark:text-white text-black px-2 py-1 font-medium inline-flex items-center space-x-1`}
           >
             contact
           </p>
         </div>
 
-        {/* Main Content */}
         <div
-          className={`${Interf.className} font-light space-y-4 text-gray-400`}
+          className={`${Interf.className} font-light space-y-4 dark:text-gray-950 text-gray-400`}
         >
           <p>
-            Mail me at{" "}
+            Mail me at{""}
             <Link
               href="mailto:sayhi@remiel.fyi?subject=Hi there!"
-              className="group inline-flex items-center space-x-1 text-white hover:text-gray-300 transition-colors ml-1"
+              className="group inline-flex items-center space-x-1 dark:text-orange-600 text-white hover:text-gray-300 transition-colors ml-1"
             >
               <span>sayhi@remiel.fyi</span>
             </Link>
             .
           </p>
 
-          {/* Social Icons */}
           <div className="flex items-center space-x-4">
             <SocialLink
               href="https://linkedin.com/in/jaswanthremiel"
@@ -55,7 +51,7 @@ export function Contact() {
               href="https://github.com/jaswanthremiel"
               label="Github"
               iconPath="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
-              onHover="hover:text-white"
+              onHover="hover:text-white dark:hover:text-black"
             />
             <SocialLink
               href="https://behance.net/jaswanthremiel"

@@ -30,7 +30,7 @@ export default function ProjectCarousel() {
         transition={{ duration: 0.5 }}
       >
         <section
-          className={`${alegreya.className} bg-orange-500 text-black px-2 py-0.75  font-sm inline-flex items-center space-x-1 font-semibold`}
+          className={`${alegreya.className} bg-orange-500 dark:text-white text-black px-2 py-0.75  font-sm inline-flex items-center space-x-1 font-semibold`}
         >
           <span>projects</span>
           <ArrowIcon />

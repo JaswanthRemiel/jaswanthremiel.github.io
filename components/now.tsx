@@ -26,11 +26,11 @@ export function Now() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <section className="font-sm bg-orange-500 text-black px-2 py-0.75 font-semibold inline-flex items-center space-x-1">
+      <section className="font-sm bg-orange-500 dark:text-white text-black px-2 py-0.75 font-semibold inline-flex items-center space-x-1">
         <p className={`${alegreya.className} font-semibold `}>now</p>
       </section>
       <div
-        className={`${Interf.className}  text-justify space-y-6 text-gray-300`}
+        className={`${Interf.className} dark:text-gray-950 text-justify space-y-6 text-gray-300`}
       >
         <p>
           currently juggling multiple hats (figuratively—I don&apos;t own many
@@ -41,7 +41,7 @@ export function Now() {
           <Link
             href={links.youtube}
             target="_blank"
-            className="space-y-6 text-gray-100 underline decoration-orange-600 "
+            className="space-y-6 text-gray-100 dark:text-gray-800 underline decoration-orange-600 dark:decoration-orange-300"
           >
             Youtube
           </Link>{" "}
@@ -49,7 +49,7 @@ export function Now() {
           <Link
             href={links.twitter}
             target="_blank"
-            className="space-y-6 text-gray-100 underline decoration-orange-600 "
+            className="space-y-6 text-gray-100 dark:text-gray-800 underline decoration-orange-600 dark:decoration-orange-300"
           >
             Twitter
           </Link>

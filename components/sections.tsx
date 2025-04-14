@@ -20,7 +20,7 @@ export function Sections() {
       <div className="flex flex-col md:flex-row gap-8 md:gap-12 w-full ">
         <div className="w-full space-y-8">
           <section
-            className={`${alegreya.className} bg-orange-500 text-black px-2 py-0.75  font-sm inline-flex items-center space-x-1 font-semibold`}
+            className={`${alegreya.className} bg-orange-500 text-black dark:text-white px-2 py-0.75  font-sm inline-flex items-center space-x-1 font-semibold`}
           >
             <span>writing</span>
             <ArrowIcon />
@@ -46,11 +46,11 @@ export function Sections() {
         </div>
         <div className="w-full space-y-8">
           <section
-            className={`${alegreya.className} bg-orange-500 text-black px-2 py-0.75  font-sm inline-flex items-center space-x-1 font-semibold`}
+            className={`${alegreya.className} bg-orange-500 text-black dark:text-white px-2 py-0.75  font-sm inline-flex items-center space-x-1 font-semibold`}
           >
             <span>some more ..</span>
           </section>
-          <div className="space-y-6 text-justify">
+          <div className="space-y-6 text-justify dark:text-gray-950">
             <ProjectItem
               href="https://uxplanet.org/must-have-design-resources-in-2023-part-1-fc3cbb5fcaf4"
               title="must-have design resources in 2023"
