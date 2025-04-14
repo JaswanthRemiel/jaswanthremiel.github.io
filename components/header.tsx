@@ -39,10 +39,9 @@ export function Header() {
       <div className="flex-col items-start space-y-4">
         <button
           onClick={toggleTheme}
-          className="p-2 rounded border
-        "
+          className="bg-orange-500 dark:text-white text-black px-2 py-0.75  font-sm inline-flex items-center space-x-1 font-semibold"
         >
-          {theme === "light" ? "Dark" : "Light"}
+          {theme === "light" ? "Light" : "Dark"}
         </button>
         <div className="whitespace-pre-wrap text-2xl font-sm">
           <p className="text-gray-100 dark:text-black">{"hi i'm remiel"}</p>
