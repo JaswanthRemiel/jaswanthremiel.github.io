@@ -26,7 +26,7 @@ export function Sections() {
             <ArrowIcon />
           </section>
 
-          <div className="space-y-6 text-justify">
+          <div className="space-y-6">
             <ProjectItem
               href="https://remiel.fyi/blog/deploying-nextjs-to-github-pages-use-github-actions-and-custom-domains"
               title="deploying Next.js to GitHub Pages: use GitHub Actions and Custom Domains"
@@ -50,7 +50,7 @@ export function Sections() {
           >
             <span>some more ..</span>
           </section>
-          <div className="space-y-6 text-justify dark:text-gray-950">
+          <div className="space-y-6 dark:text-gray-950">
             <ProjectItem
               href="https://uxplanet.org/must-have-design-resources-in-2023-part-1-fc3cbb5fcaf4"
               title="must-have design resources in 2023"
