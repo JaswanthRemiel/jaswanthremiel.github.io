@@ -5,9 +5,12 @@ import Link from "next/link";
 import { Newsreader } from "next/font/google";
 import { WritingColumn } from "./writingcolumn";
 import { ArrowIcon } from "./ui/ArrowIcon";
-
+import { Manrope } from "next/font/google";
 import { Alegreya } from "next/font/google";
 import { Inter } from "next/font/google";
+const manrope = Manrope({
+  subsets: ["latin"],
+});
 const Interf = Inter({
   subsets: ["latin"],
   weight: "500",
@@ -32,7 +35,7 @@ export function Work() {
         <ArrowIcon />
       </section>
       <div
-        className={`${Interf.className} dark:text-gray-700 text-justify space-y-6 text-gray-300`}
+        className={`${manrope.className} font-semibold dark:text-black text-justify space-y-6 text-gray-300`}
       >
         <p>
           currently juggling multiple hats (figuratively—I don&apos;t own many

@@ -7,13 +7,16 @@ import { Newsreader } from "next/font/google";
 import { Typewriter } from "./ui/typewriter";
 import { Alegreya } from "next/font/google";
 import { Inter } from "next/font/google";
+import { Manrope } from "next/font/google";
 import ThemeToggle from "@/components/ui/dark-but";
 import useTheme from "@/hooks/useTheme";
 import { Lightbulb, LightbulbOff } from "lucide-react";
 
+const manrope = Manrope({
+  subsets: ["latin"],
+});
 const Interf = Inter({
   subsets: ["latin"],
-  weight: "500",
 });
 const alegreya = Alegreya({
   subsets: ["latin"],
@@ -59,9 +62,9 @@ export function Header() {
           </div>
         </div>
 
-        <div className="flex-col items-start space-y-2">
+        <div className="flex-col items-start">
           <p
-            className={` ${Interf.className}  text-gray-300 dark:text-gray-700 font-medium text-justify`}
+            className={` ${manrope.className}  font-semibold text-gray-300 dark:text-black text-justify  `}
           >
             I fuse art and technology to craft immersive digital experiences,
             where every pixel and line of code is a deliberate stroke of
@@ -70,42 +73,12 @@ export function Header() {
             for innovation into engaging content on{" "}
             <Link
               href={links.youtube}
-              className="underline decoration-orange-600 dark:text-black"
+              className=" decoration-orange-600 dark:text-orange-600"
               target="_blank"
             >
               remielgraphy
             </Link>
             , sparking curiosity and empowering a global community of creators.
-          </p>
-
-          <p
-            className={`${Interf.className} text-gray-300 dark:text-gray-700 font-medium text-justify`}
-          >
-            checkout my{" "}
-            <Link
-              href={links.blog}
-              target="_blank"
-              className="underline decoration-orange-600 text-gray-100 dark:text-black  "
-            >
-              blog
-            </Link>{" "}
-            ,{" "}
-            <Link
-              href={links.store}
-              target="_blank"
-              className="underline decoration-orange-600 text-gray-100 dark:text-black  "
-            >
-              store
-            </Link>
-            , and{" "}
-            <Link
-              href={links.merch}
-              target="_blank"
-              className="underline decoration-orange-600 text-gray-100 dark:text-black  "
-            >
-              merch
-            </Link>
-            .
           </p>
         </div>
       </div>

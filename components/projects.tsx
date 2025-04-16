@@ -22,7 +22,7 @@ export default function Projects() {
   });
 
   return (
-    <div className="w-full space-y-8">
+    <div className="space-y-8">
       <motion.div
         className="space-y-8"
         initial={{ opacity: 0, y: 20 }}
