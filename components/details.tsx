@@ -7,6 +7,7 @@ export const store = "./store";
 export const merch = "https://merch.remiel.fyi";
 export const preview =
   "https://raw.githubusercontent.com/JaswanthRemiel/jaswanthremiel.github.io/refs/heads/main/app/preview.png";
+
 interface Project {
   id: string;
   title: string;

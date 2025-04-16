@@ -2,8 +2,6 @@ import { Header } from "@/components/header";
 import { WritingColumn } from "@/components/writingcolumn";
 import { Work } from "@/components/work";
 import { Contact } from "@/components/contact";
-import { Footer } from "@/components/footer";
-import { Navbar } from "@/components/navBar";
 import { motion } from "framer-motion";
 import Skills from "@/components/skills";
 import Projects from "@/components/projects";

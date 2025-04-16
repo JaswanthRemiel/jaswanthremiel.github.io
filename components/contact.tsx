@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Alegreya } from "next/font/google";
 import { Inter } from "next/font/google";
 import { SpinningText } from "@/components/ui/spinning-text";
-import { ArrowIcon } from "./ArrowIcon";
+import { ArrowIcon } from "./ui/ArrowIcon";
 
 const alegreya = Alegreya({ subsets: ["latin"] });
 const Interf = Inter({ subsets: ["latin"], weight: "500" });

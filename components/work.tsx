@@ -4,13 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Newsreader } from "next/font/google";
 import { WritingColumn } from "./writingcolumn";
-import { ArrowIcon } from "./ArrowIcon";
-import {
-  Accordion,
-  AccordionItem,
-  AccordionTrigger,
-  AccordionContent,
-} from "@/components/ui/accordion";
+import { ArrowIcon } from "./ui/ArrowIcon";
 
 import { Alegreya } from "next/font/google";
 import { Inter } from "next/font/google";

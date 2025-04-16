@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ProjectItem } from "./projectitem";
-import { ArrowIcon } from "./ArrowIcon";
+import { ProjectItem } from "./ui/projectitem";
+import { ArrowIcon } from "./ui/ArrowIcon";
 import { Alegreya } from "next/font/google";
 const alegreya = Alegreya({
   subsets: ["latin"],

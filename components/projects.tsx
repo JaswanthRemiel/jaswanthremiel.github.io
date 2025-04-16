@@ -9,7 +9,7 @@ import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { Alegreya } from "next/font/google";
-import { ArrowIcon } from "@/components/ArrowIcon";
+import { ArrowIcon } from "@/components/ui/ArrowIcon";
 const alegreya = Alegreya({
   subsets: ["latin"],
 });
