@@ -63,3 +63,16 @@
     @apply bg-background text-foreground;
   }
 }
+@font-face {
+  font-family: 'Advercase';
+  src: url('/fonts/AdvercaseFontRegular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Advercase';
+  src: url('/fonts/AdvercaseFontBold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}

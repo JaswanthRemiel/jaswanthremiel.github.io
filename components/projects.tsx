@@ -30,7 +30,7 @@ export default function Projects() {
         transition={{ duration: 0.5 }}
       >
         <section
-          className={`${alegreya.className} bg-orange-500 dark:text-white text-black px-2 py-0.75  font-sm inline-flex items-center space-x-1 font-semibold`}
+          className={` font-advercase bg-orange-500 dark:text-white text-black px-2 py-0.75  inline-flex items-center space-x-1 `}
         >
           <span>projects</span>
           <ArrowIcon />

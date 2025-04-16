@@ -20,7 +20,7 @@ export function WritingColumn() {
       <div className="flex flex-col md:flex-row gap-8 md:gap-12 w-full ">
         <div className="w-full space-y-8">
           <section
-            className={`${alegreya.className} bg-orange-500 text-black dark:text-white px-2 py-0.75  font-sm inline-flex items-center space-x-1 font-semibold`}
+            className={` font-advercase bg-orange-500 text-black dark:text-white px-2 py-0.75  inline-flex items-center space-x-1 `}
           >
             <span>writing</span>
             <ArrowIcon />
@@ -46,7 +46,7 @@ export function WritingColumn() {
         </div>
         <div className="w-full space-y-8">
           <section
-            className={`${alegreya.className} bg-orange-500 text-black dark:text-white px-2 py-0.75  font-sm inline-flex items-center space-x-1 font-semibold`}
+            className={` font-advercase bg-orange-500 text-black dark:text-white px-2 py-0.75  inline-flex items-center space-x-1 `}
           >
             <span>some more ..</span>
           </section>

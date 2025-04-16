@@ -33,8 +33,8 @@ export function Work() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <section className="font-sm bg-orange-500 dark:text-white text-black px-2 py-0.75 font-semibold inline-flex items-center space-x-1">
-        <span className={`${alegreya.className} font-semibold `}>work</span>
+      <section className="font-sm bg-orange-500 dark:text-white text-black px-2 py-0.75 inline-flex items-center space-x-1">
+        <span className={`font-advercase `}>work</span>
         <ArrowIcon />
       </section>
       <div

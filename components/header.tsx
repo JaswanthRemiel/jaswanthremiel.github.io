@@ -32,7 +32,9 @@ export function Header() {
       <div className="flex-col items-start space-y-4">
         <div className="flex items-center justify-between">
           <div className="whitespace-pre-wrap text-2xl font-sm">
-            <p className="text-gray-100 dark:text-black ">{"hi i'm remiel"}</p>
+            <p className="font-advercase text-gray-100 dark:text-black ">
+              {"Howdy, Remiel here."}
+            </p>
             <Typewriter
               text={[
                 "a fullstack developer.",
@@ -41,7 +43,7 @@ export function Header() {
                 "turning ideas alive.",
               ]}
               speed={70}
-              className="text-orange-500"
+              className="font-advercase font-extralight text-orange-500"
               waitTime={1500}
               deleteSpeed={40}
               cursorChar={"_"}
@@ -59,7 +61,7 @@ export function Header() {
 
         <div className="flex-col items-start space-y-2">
           <p
-            className={`${Interf.className}  text-gray-300 dark:text-gray-700 font-medium text-justify`}
+            className={` ${Interf.className}  text-gray-300 dark:text-gray-700 font-medium text-justify`}
           >
             I fuse art and technology to craft immersive digital experiences,
             where every pixel and line of code is a deliberate stroke of

@@ -7,7 +7,6 @@ import { Navbar } from "@/components/navBar";
 import { motion } from "framer-motion";
 import Skills from "@/components/skills";
 import Projects from "@/components/projects";
-// import DockDemo from "@/components/dock";
 
 export default function Page() {
   return (

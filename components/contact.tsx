@@ -21,7 +21,7 @@ export function Contact() {
       <div className="space-y-6">
         <div className="space-y-4">
           <div
-            className={`${alegreya.className} bg-orange-500 dark:text-white text-black px-2 py-1 font-medium inline-flex items-center space-x-1`}
+            className={` font-advercase bg-orange-500 dark:text-white text-black px-2 py-1 inline-flex items-center space-x-1`}
           >
             <span>contact</span>
             <ArrowIcon />
