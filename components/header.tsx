@@ -25,43 +25,46 @@ const newsreader = Newsreader({ subsets: ["latin"], weight: ["300"] });
 
 export function Header() {
   const { theme, toggleTheme } = useTheme();
+
   return (
     <motion.section
-      className="overflow-x-auto pb-6 md:pb-0 md:overflow-x-visible"
+      className="overflow-x-auto pb-6 md:pb-0 md:overflow-x-visible relative" // Added `relative` to make it the reference for absolute positioning
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="flex-col items-start space-y-4">
-        <div className="flex items-center justify-between">
-          <div className="whitespace-pre-wrap text-2xl font-sm">
-            <p className="font-advercase text-gray-100 dark:text-black ">
-              {"Howdy, Remiel here."}
-            </p>
-            <Typewriter
-              text={[
-                "a fullstack developer.",
-                "a cracked designer.",
-                "I build worlds.",
-                "turning ideas alive.",
-              ]}
-              speed={70}
-              className="font-advercase font-extralight text-orange-500"
-              waitTime={1500}
-              deleteSpeed={40}
-              cursorChar={"_"}
-            />
-          </div>
-          <div className="ml-auto">
-            <button
-              onClick={toggleTheme}
-              className="text-gray-500 dark:text-orange-600"
-            >
-              {theme === "light" ? <Lightbulb /> : <LightbulbOff />}
-            </button>
-          </div>
+      {/* Parent Container */}
+      <div className="flex-col items-start space-y-4 relative">
+        {" "}
+        <div className="absolute top-4 right-4 z-10">
+          <button
+            onClick={toggleTheme}
+            className={`${alegreya.className} bg-orange-500 dark:bg-orange-500 dark:text-white text-black px-1 py-0.75  inline-flex items-center space-x-2`}
+          >
+            <span className="text-sm font-semibold">
+              {theme === "light" ? "Light Mode" : "Dark Mode"}
+            </span>
+          </button>
         </div>
-
+        {/* Main Content */}
+        <div className="whitespace-pre-wrap text-2xl font-sm">
+          <p className="font-advercase text-gray-100 dark:text-black">
+            {"Howdy, Remiel here."}
+          </p>
+          <Typewriter
+            text={[
+              "a fullstack developer.",
+              "a cracked designer.",
+              "I build worlds.",
+              "turning ideas alive.",
+            ]}
+            speed={70}
+            className="font-advercase font-extralight text-orange-500"
+            waitTime={1500}
+            deleteSpeed={40}
+            cursorChar={"_"}
+          />
+        </div>
         <div className="flex-col items-start">
           <p
             className={` ${manrope.className}  font-semibold text-gray-300 dark:text-black text-justify  `}
