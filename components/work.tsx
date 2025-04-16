@@ -1,5 +1,6 @@
 "use client";
 import * as links from "./details";
+import { DATA } from "./DATA";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Newsreader } from "next/font/google";
@@ -8,6 +9,7 @@ import { ArrowIcon } from "./ui/ArrowIcon";
 import { Manrope } from "next/font/google";
 import { Alegreya } from "next/font/google";
 import { Inter } from "next/font/google";
+import { ResumeCard } from "./resume-card";
 const manrope = Manrope({
   subsets: ["latin"],
 });
@@ -37,29 +39,20 @@ export function Work() {
       <div
         className={`${manrope.className} font-semibold dark:text-black text-justify space-y-6 text-gray-300`}
       >
-        <p>
-          currently juggling multiple hats (figuratively—I don&apos;t own many
-          hats), I&apos;m diving deep into tech as a PRISM intern at samsung r&d
-          india, crafting AI-driven content moderation tools and learning
-          something new every day. When not working on cutting-edge projects,
-          I&apos;m busy building my personal brand and sharing my journey on{" "}
-          <Link
-            href={links.youtube}
-            target="_blank"
-            className="space-y-6 text-gray-100 dark:text-gray-800 underline decoration-orange-600 dark:decoration-orange-300"
-          >
-            Youtube
-          </Link>{" "}
-          and{" "}
-          <Link
-            href={links.twitter}
-            target="_blank"
-            className="space-y-6 text-gray-100 dark:text-gray-800 underline decoration-orange-600 dark:decoration-orange-300"
-          >
-            Twitter
-          </Link>
-          , if you&apos;re curious.
-        </p>
+        <div id="work" className={`${manrope.className}`}>
+          {DATA.work.map((work, id) => (
+            <ResumeCard
+              key={work.company}
+              logoUrl={work.logoUrl}
+              altText={work.company}
+              title={work.company}
+              subtitle={work.title}
+              href={work.href}
+              period={`${work.start} - ${work.end ?? "Present"}`}
+              description={work.description}
+            />
+          ))}
+        </div>
       </div>
     </motion.section>
   );
