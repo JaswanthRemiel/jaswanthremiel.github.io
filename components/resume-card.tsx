@@ -49,14 +49,13 @@ export const ResumeCard = ({
     >
       <Card className="flex flex-row items-start border border-gray-700 dark:border-gray-500 rounded-md p-3 mb-3">
         {/* Logo */}
-        <div className="flex-shrink-0 mr-4 sm:hidden">
+        <div className="hidden md:block flex-shrink-0 mr-4">
           <img
             src={logoUrl}
             alt={altText}
             className="w-[70px] h-[70px] object-contain rounded-full"
           />
         </div>
-
         {/* Content */}
         <div className="flex-grow">
           <CardHeader className="mb-1">
