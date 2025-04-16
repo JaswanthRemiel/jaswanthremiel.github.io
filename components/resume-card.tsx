@@ -10,6 +10,10 @@ import { Manrope } from "next/font/google";
 const manrope = Manrope({
   subsets: ["latin"],
 });
+import { Inter } from "next/font/google";
+const interf = Inter({
+  subsets: ["latin"],
+});
 
 interface ResumeCardProps {
   logoUrl: string;
@@ -105,7 +109,7 @@ export const ResumeCard = ({
                   duration: 0.7,
                   ease: [0.16, 1, 0.3, 1],
                 }}
-                className="mt-2 text-sm sm:text-base text-gray-400 dark:text-gray-500"
+                className={` mt-2 font-medium text-sm sm:text-base dark:text-gray-600 text-justify text-gray-400`}
               >
                 {description}
               </motion.div>

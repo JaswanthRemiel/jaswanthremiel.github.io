@@ -18,7 +18,7 @@ export function WritingColumn() {
       transition={{ duration: 0.5 }}
     >
       <div className="flex flex-col md:flex-row gap-8 md:gap-12 w-full ">
-        <div className="w-full space-y-8">
+        <div className="w-full space-y-6">
           <section
             className={` font-advercase bg-orange-500 text-black dark:text-white px-2 py-0.75  inline-flex items-center space-x-1 `}
           >
@@ -44,7 +44,7 @@ export function WritingColumn() {
             />
           </div>
         </div>
-        <div className="w-full space-y-8">
+        <div className="w-full space-y-6">
           <section
             className={` font-advercase bg-orange-500 text-black dark:text-white px-2 py-0.75  inline-flex items-center space-x-1 `}
           >

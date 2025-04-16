@@ -13,8 +13,8 @@ export default function Page() {
         <Header />
         <Projects />
         <Work />
-        <Skills />
         <WritingColumn />
+        <Skills />
         <Contact />
       </main>
     </div>

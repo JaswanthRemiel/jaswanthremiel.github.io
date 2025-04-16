@@ -10,7 +10,6 @@ import { Inter } from "next/font/google";
 import { Manrope } from "next/font/google";
 import ThemeToggle from "@/components/ui/dark-but";
 import useTheme from "@/hooks/useTheme";
-import { Lightbulb, LightbulbOff } from "lucide-react";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -21,7 +20,7 @@ const Interf = Inter({
 const alegreya = Alegreya({
   subsets: ["latin"],
 });
-const newsreader = Newsreader({ subsets: ["latin"], weight: ["300"] });
+const newsreader = Newsreader({ subsets: ["latin"] });
 
 export function Header() {
   const { theme, toggleTheme } = useTheme();
@@ -34,8 +33,7 @@ export function Header() {
       transition={{ duration: 0.5 }}
     >
       {/* Parent Container */}
-      <div className="flex-col items-start space-y-4 relative">
-        {" "}
+      <div className="flex-col items-start space-y-6">
         <div>
           <button
             onClick={toggleTheme}
@@ -67,7 +65,7 @@ export function Header() {
         </div>
         <div className="flex-col items-start">
           <p
-            className={` ${manrope.className}  font-semibold text-gray-300 dark:text-black text-justify  `}
+            className={` ${Interf.className} lg:text-xl md:text-lg sm:text-lg font-light text-gray-300 dark:text-black text-justify  `}
           >
             I fuse art and technology to craft immersive digital experiences,
             where every pixel and line of code is a deliberate stroke of
@@ -76,7 +74,7 @@ export function Header() {
             for innovation into engaging content on{" "}
             <Link
               href={links.youtube}
-              className=" decoration-orange-600 dark:text-orange-600"
+              className=" decoration-orange-600 dark:text-orange-600 text-orange-400"
               target="_blank"
             >
               remielgraphy

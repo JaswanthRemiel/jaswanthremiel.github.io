@@ -9,6 +9,10 @@ import { ArrowIcon } from "./ui/ArrowIcon";
 
 const alegreya = Alegreya({ subsets: ["latin"] });
 const Interf = Inter({ subsets: ["latin"], weight: "500" });
+const today = new Date();
+const day = today
+  .toLocaleDateString("en-US", { weekday: "long" })
+  .toLowerCase();
 
 export function Contact() {
   return (
@@ -31,7 +35,7 @@ export function Contact() {
         <div
           className={`${Interf.className} font-light space-y-4 dark:text-gray-950 text-gray-400`}
         >
-          <p>
+          <div>
             Mail me at{""}
             <Link
               href="mailto:sayhi@remiel.fyi?subject=Hi there!"
@@ -39,9 +43,8 @@ export function Contact() {
             >
               <span>sayhi@remiel.fyi</span>
             </Link>
-            .
-          </p>
-
+            <p>have a nice {day} ahead.</p>
+          </div>
           <div className="flex items-center space-x-4">
             <SocialLink
               href="https://linkedin.com/in/jaswanthremiel"
