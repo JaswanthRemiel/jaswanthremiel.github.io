@@ -36,7 +36,7 @@ export function Header() {
       {/* Parent Container */}
       <div className="flex-col items-start space-y-4 relative">
         {" "}
-        <div className="absolute top-4 right-4 z-10">
+        <div>
           <button
             onClick={toggleTheme}
             className={`${alegreya.className} bg-orange-500 dark:bg-orange-500 dark:text-white text-black px-1 py-0.75  inline-flex items-center space-x-2`}
