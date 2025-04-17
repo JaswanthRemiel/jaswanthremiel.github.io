@@ -40,7 +40,7 @@ export function Work() {
       <div
         className={`${Interf.className} font-semibold dark:text-black text-justify space-y-4 text-gray-300`}
       >
-        <p className="lg:text-xl md:text-lg sm:text-lg font-light text-gray-300 dark:text-black text-justify">
+        <p className="lg:text-xl md:text-lg sm:text-lg font-medium text-gray-300 dark:text-black text-justify">
           If you've ever dreamed of creating something amazing (think robots or
           flying cars), well, I swapped crayons for code and never looked back.
           By day, I'm a UX designer and developer, and by night, I'm still
