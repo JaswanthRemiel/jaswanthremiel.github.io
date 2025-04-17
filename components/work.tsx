@@ -41,14 +41,9 @@ export function Work() {
         className={`${Interf.className} font-semibold dark:text-black text-justify space-y-4 text-gray-300`}
       >
         <p className="lg:text-xl md:text-lg sm:text-lg font-medium text-gray-300 dark:text-black text-justify">
-          If you've ever dreamed of creating something amazing (think robots or
-          flying cars), well, I swapped crayons for code and never looked back.
-          By day, I'm a UX designer and developer, and by night, I'm still
-          probably coding because sleep is for the weak, right? Think of me as a
-          digital Swiss Army knife – versatile, innovative, and always ready to
-          craft something spectacular. I'm passionate about designing digital
-          experiences that make people say "wow" and building web applications
-          more stable than a server after a reboot. my work experience includes
+          I'm passionate about designing digital experiences that make people
+          say "wow" and building web applications more stable than a server
+          after a reboot. my work experience includes
         </p>
         <div id="work" className={`${Interf.className}`}>
           {DATA.work.map((work, id) => (
