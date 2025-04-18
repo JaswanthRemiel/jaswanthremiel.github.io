@@ -82,7 +82,7 @@ export function Header() {
         </div>
         <div className="flex-col items-start">
           <p
-            className={` font-Innovator font-semibold lg:text-xl md:text-lg sm:text-lg text-white dark:text-black text-justify  `}
+            className={` font-Innovator font-normal lg:text-xl md:text-lg sm:text-lg text-white dark:text-black text-justify  `}
           >
             I fuse art and technology to craft immersive digital experiences,
             where every pixel and line of code is a deliberate stroke of
@@ -101,12 +101,6 @@ export function Header() {
           </p>
         </div>
         <div className="space-y-6 ">
-          {/* <div
-        className={` font-advercase bg-orange-500 dark:text-white text-black px-2 py-0.75  inline-flex items-center space-x-1 `}
-      >
-        <span>skills</span>
-        <ArrowIcon />
-      </div> */}
           <div className="flex-col justify space-y-5">
             <motion.section
               className="space-y-8"
@@ -121,49 +115,62 @@ export function Header() {
                 className="w-full h-full"
               >
                 <img
-                  src="/nextjs.webp"
-                  alt="NEXT.js logo"
-                  className="h-[55px] w-auto"
-                />
-                <img
                   src="/reactjs.webp"
                   alt="REACT.js logo"
-                  className="h-[55px] w-auto"
+                  className="w-auto h-[55px]"
                 />
                 <img
                   src="/TailwindCSS.webp"
                   alt="TailwindCSS logo"
-                  className="h-[55px] w-auto"
+                  className="w-auto h-[55px]"
                 />
                 <img
                   src="/typescript.webp"
                   alt="TypeScript logo"
-                  className="h-[55px] w-auto"
+                  className="w-auto h-[55px]"
                 />
                 <img
                   src="/nodejs.webp"
                   alt="Node.js logo"
-                  className="h-[55px] w-auto"
+                  className="w-auto h-[55px]"
                 />
+                <img
+                  src="/nextjs.webp"
+                  alt="NEXT.js logo"
+                  className="w-auto h-[55px] dark:hidden"
+                />
+                {/* Vercel */}
                 <img
                   src="/vercel.webp"
                   alt="Vercel logo"
-                  className="h-[55px] w-auto"
+                  className="w-auto h-[55px] dark:hidden"
                 />
+                <img
+                  src="/verceldark.webp"
+                  alt="Vercel logo"
+                  className="w-auto h-[55px] hidden dark:block"
+                />
+                {/* AWS */}
                 <img
                   src="/aws.webp"
                   alt="AWS logo"
-                  className="h-[55px] w-auto"
+                  className="w-auto h-[55px] dark:hidden"
                 />
                 <img
-                  src="/appwrite.webp"
-                  alt="Appwrite logo"
-                  className="h-[55px] w-auto"
+                  src="/awsdark.webp"
+                  alt="AWS logo"
+                  className="w-auto h-[55px] hidden dark:block"
                 />
+                {/* GitHub */}
                 <img
                   src="/github.webp"
                   alt="GitHub logo"
-                  className="h-[55px] w-auto"
+                  className="w-auto h-[55px] dark:hidden"
+                />
+                <img
+                  src="/githubdark.webp"
+                  alt="GitHub logo"
+                  className="w-auto h-[55px] hidden dark:block"
                 />
               </InfiniteSlider>
             </motion.section>
