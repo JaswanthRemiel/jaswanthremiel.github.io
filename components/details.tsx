@@ -18,6 +18,14 @@ interface Project {
 export const projects: Project[] = [
   {
     id: "1",
+    title: "gitsush",
+    description:
+      "GitSush is a quirky and efficient CLI tool that wraps git add, commit, and push into a single command.",
+    imageUrl: "/gitsush.webp?height=400&width=600",
+    projectUrl: "https://www.npmjs.com/package/gitsush",
+  },
+  {
+    id: "2",
     title: "AI-text-Summarizer",
     description:
       "AI Text Summarizer is a Node.js-based server-side rendering application designed to provide users with concise summaries of lengthy texts.",
@@ -25,7 +33,7 @@ export const projects: Project[] = [
     projectUrl: "http://remiel.fyi/ai-summarizer",
   },
   {
-    id: "2",
+    id: "3",
     title: "Batmode Chrome Web Extension",
     description:
       "Batmode is a Chrome extension that instantly enables dark mode across any website, giving your eyes the comfort they deserve.",
@@ -33,7 +41,7 @@ export const projects: Project[] = [
     projectUrl: "http://remiel.fyi/batmode",
   },
   {
-    id: "3",
+    id: "4",
     title: "CryptoCAT NFT",
     description:
       "CryptoCat NFT is a specialized Twitter bot with a paw firmly placed in the rapidly evolving world of Non-Fungible Tokens (NFTs).",
@@ -41,7 +49,7 @@ export const projects: Project[] = [
     projectUrl: "http://remiel.fyi/cryptocat/",
   },
   {
-    id: "4",
+    id: "5",
     title: "LinkDescrip AI",
     description:
       "LinkDescrip AI is a web application that helps users generate optimized LinkedIn headlines based on their professional bios.",
@@ -49,7 +57,7 @@ export const projects: Project[] = [
     projectUrl: "https://linkdescrip-ai.vercel.app/",
   },
   {
-    id: "5",
+    id: "6",
     title: "Multimodal Classficition Web App using Hybrid Models",
     description:
       "A multimodal classification project combining text and image processing. Includes pre-trained models and a streamlined interface for inference.",
