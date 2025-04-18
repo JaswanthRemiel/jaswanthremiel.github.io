@@ -5,7 +5,7 @@ interface ProjectItemProps {
   title: string;
   description: string;
 }
-
+const name = "jaswanth";
 export function ProjectItem({ href, title, description }: ProjectItemProps) {
   return (
     <div>
