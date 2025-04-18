@@ -10,6 +10,7 @@ module.exports = {
     extend: {
       fontFamily: {
         advercase: ["Advercase"],
+        Innovator: ["Innovator Grotesk"],
       },
       borderRadius: {
         lg: "var(--radius)",

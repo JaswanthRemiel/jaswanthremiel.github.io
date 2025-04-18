@@ -6,12 +6,12 @@ import { ArrowIcon } from "./ui/ArrowIcon";
 export default function Skills() {
   return (
     <div className="space-y-6 dark:hidden">
-      <div
+      {/* <div
         className={` font-advercase bg-orange-500 dark:text-white text-black px-2 py-0.75  inline-flex items-center space-x-1 `}
       >
         <span>skills</span>
         <ArrowIcon />
-      </div>
+      </div> */}
       <div className="flex-col justify space-y-5">
         <motion.section
           className="space-y-8"

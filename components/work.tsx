@@ -38,9 +38,9 @@ export function Work() {
         <ArrowIcon />
       </section>
       <div
-        className={`${Interf.className} font-semibold dark:text-black text-justify space-y-4 text-gray-300`}
+        className={`font-Innovator font-semibold dark:text-black text-justify space-y-4 text-gray-300`}
       >
-        <p className="lg:text-xl md:text-lg sm:text-lg font-medium text-gray-300 dark:text-black text-justify">
+        <p className="lg:text-xl md:text-lg sm:text-lg  text-white dark:text-black text-justify">
           I'm passionate about designing digital experiences that make people
           say "wow" and building web applications more stable than a server
           after a reboot. my work experience includes

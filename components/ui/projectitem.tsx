@@ -12,11 +12,13 @@ export function ProjectItem({ href, title, description }: ProjectItemProps) {
       <Link
         href={href}
         target="_blank"
-        className="group inline-flex items-center space-x-1 text-white hover:text-gray-300 dark:text-gray-950 transition-colors"
+        className="group inline-flex items-center space-x-1 text-white hover:text-gray-300 dark:text-black transition-colors"
       >
-        <span className="underline decoration-gray-500 font-sm ">{title}</span>
+        <span className="underline font-semibold font-Innovator decoration-gray-500 font-sm ">
+          {title}
+        </span>
       </Link>
-      <p className="text-sm font-sm dark:text-gray-600 text-justify text-gray-400 mt-1">
+      <p className="text-sm font-sm font-Innovator dark:text-gray-600 text-justify text-gray-400 mt-1">
         {description}
       </p>
     </div>
