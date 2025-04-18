@@ -14,7 +14,7 @@ export function ProjectItem({ href, title, description }: ProjectItemProps) {
         target="_blank"
         className="group inline-flex items-center space-x-1 text-white hover:text-gray-300 dark:text-black transition-colors"
       >
-        <span className="underline font-advercase font-semibold  decoration-gray-500 font-sm ">
+        <span className="underline font-Innovator font-semibold  decoration-gray-500 font-sm ">
           {title}
         </span>
       </Link>
