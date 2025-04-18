@@ -54,10 +54,7 @@ export function Work() {
           passion for innovation and creating value through technology. I'm
           passionate about designing digital experiences that make people say
           "wow" and building web applications more stable than a server after a
-          reboot. My work experience includes leading projects at Samsung R&D
-          India, contributing to impactful research at IIT Palakkad, and
-          fostering technical communities as a Microsoft Learn Student
-          Ambassador.
+          reboot. My work experience includes
         </p>
         <div id="work" className={`${Interf.className}`}>
           {DATA.work.map((work, id) => (
