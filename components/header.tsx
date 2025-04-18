@@ -82,7 +82,7 @@ export function Header() {
         </div>
         <div className="flex-col items-start">
           <p
-            className={` font-Innovator font-normal lg:text-xl md:text-lg sm:text-lg text-white dark:text-black text-justify  `}
+            className={` font-Innovator font-normal tracking-tight lg:text-xl md:text-lg sm:text-lg text-white dark:text-black text-justify  `}
           >
             I fuse art and technology to craft immersive digital experiences,
             where every pixel and line of code is a deliberate stroke of

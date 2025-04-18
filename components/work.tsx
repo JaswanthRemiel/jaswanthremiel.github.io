@@ -40,7 +40,7 @@ export function Work() {
       <div
         className={`font-Innovator font-normal dark:text-black text-justify space-y-4 text-gray-300`}
       >
-        <p className="lg:text-xl md:text-lg sm:text-lg  text-white dark:text-black text-justify">
+        <p className="lg:text-xl md:text-lg sm:text-lg tracking-tight text-white dark:text-black text-justify">
           I, as a passionate and driven individual, actively contributed to
           impactful projects while fostering technical communities and honing my
           skills in web development, AI, and cloud technologies. Additionally,
@@ -48,16 +48,16 @@ export function Work() {
           earning over $500 QRR, and actively contributed to open-source
           projects like Appwrite during Hacktoberfest, showcasing my commitment
           to innovation and collaboration.
-          <p>
-            My collaborative efforts in the open-source community reflect my
-            passion for innovation and creating value through technology. I'm
-            passionate about designing digital experiences that make people say
-            "wow" and building web applications more stable than a server after
-            a reboot. My work experience includes leading projects at Samsung
-            R&D India, contributing to impactful research at IIT Palakkad, and
-            fostering technical communities as a Microsoft Learn Student
-            Ambassador.
-          </p>
+        </p>
+        <p className="lg:text-xl md:text-lg sm:text-lg tracking-tight text-white dark:text-black text-justify">
+          My collaborative efforts in the open-source community reflect my
+          passion for innovation and creating value through technology. I'm
+          passionate about designing digital experiences that make people say
+          "wow" and building web applications more stable than a server after a
+          reboot. My work experience includes leading projects at Samsung R&D
+          India, contributing to impactful research at IIT Palakkad, and
+          fostering technical communities as a Microsoft Learn Student
+          Ambassador.
         </p>
         <div id="work" className={`${Interf.className}`}>
           {DATA.work.map((work, id) => (

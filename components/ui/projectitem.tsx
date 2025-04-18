@@ -18,7 +18,7 @@ export function ProjectItem({ href, title, description }: ProjectItemProps) {
           {title}
         </span>
       </Link>
-      <p className="text-sm font-sm font-Innovator dark:text-gray-600 text-justify text-gray-400 mt-1">
+      <p className="text-sm font-sm font-Innovator tracking-tight dark:text-gray-600 text-justify text-gray-400 mt-1">
         {description}
       </p>
     </div>
