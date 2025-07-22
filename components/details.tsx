@@ -5,7 +5,7 @@ export const youtube = "https://youtube.com/@remielgraphy";
 export const blog = "./blog";
 export const store = "./store";
 export const medium = "./medium";
-export const merch = "https://merch.remiel.fyi";
+export const merch = "https://merch.remiel.work";
 export const preview =
   "https://raw.githubusercontent.com/JaswanthRemiel/jaswanthremiel.github.io/refs/heads/main/app/preview.png";
 
@@ -31,7 +31,7 @@ export const projects: Project[] = [
     description:
       "AI Text Summarizer is a Node.js-based server-side rendering application designed to provide users with concise summaries of lengthy texts.",
     imageUrl: "/aisummarize.webp?height=400&width=600",
-    projectUrl: "http://remiel.fyi/ai-summarizer",
+    projectUrl: "http://remiel.work/ai-summarizer",
   },
   {
     id: "3",
@@ -39,7 +39,7 @@ export const projects: Project[] = [
     description:
       "Batmode is a Chrome extension that instantly enables dark mode across any website, giving your eyes the comfort they deserve.",
     imageUrl: "/batmode.webp?height=400&width=600",
-    projectUrl: "http://remiel.fyi/batmode",
+    projectUrl: "http://remiel.work/batmode",
   },
   {
     id: "4",
@@ -47,7 +47,7 @@ export const projects: Project[] = [
     description:
       "CryptoCat NFT is a specialized Twitter bot with a paw firmly placed in the rapidly evolving world of Non-Fungible Tokens (NFTs).",
     imageUrl: "/cryptocat.webp?height=400&width=600",
-    projectUrl: "http://remiel.fyi/cryptocat/",
+    projectUrl: "http://remiel.work/cryptocat/",
   },
   {
     id: "5",
