@@ -51,9 +51,20 @@ export async function getContributions(username: string) {
     const res = await fetch(`https://github-contributions-api.deno.dev/${username}.json`, {
       next: { revalidate: 3600 },
     })
-    return await res.json()
+    
+    if (!res.ok) {
+      console.error(`Failed to fetch contributions: ${res.status} ${res.statusText}`)
+      return null
+    }
+    
+    const data = await res.json()
+    console.log('Contribution data fetched successfully:', {
+      total: data.total,
+      contributionsCount: data.contributions?.length
+    })
+    return data
   } catch (e) {
-    console.error("[v0] Error fetching contributions:", e)
+    console.error("Error fetching contributions:", e)
     return null
   }
 }

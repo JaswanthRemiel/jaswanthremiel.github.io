@@ -15,27 +15,92 @@ interface ContributionGraphProps {
 }
 
 export function ContributionGraph({ username, data }: ContributionGraphProps) {
-  if (!data || !data.contributions || !Array.isArray(data.contributions)) {
-    return <div className="p-4 text-muted-foreground">Loading contributions...</div>
+  // Letter patterns for "REMIEL" - 7 rows (days) x width for each letter
+  const letterPatterns = {
+    R: [
+      [4, 4, 4, 4, 0],
+      [4, 0, 0, 0, 4],
+      [4, 0, 0, 0, 4],
+      [4, 4, 4, 4, 0],
+      [4, 0, 4, 0, 0],
+      [4, 0, 0, 4, 0],
+      [4, 0, 0, 0, 4],
+    ],
+    E: [
+      [4, 4, 4, 4, 4],
+      [4, 0, 0, 0, 0],
+      [4, 0, 0, 0, 0],
+      [4, 4, 4, 4, 0],
+      [4, 0, 0, 0, 0],
+      [4, 0, 0, 0, 0],
+      [4, 4, 4, 4, 4],
+    ],
+    M: [
+      [4, 0, 0, 0, 0, 0, 4],
+      [4, 4, 0, 0, 0, 4, 4],
+      [4, 0, 4, 0, 4, 0, 4],
+      [4, 0, 0, 4, 0, 0, 4],
+      [4, 0, 0, 0, 0, 0, 4],
+      [4, 0, 0, 0, 0, 0, 4],
+      [4, 0, 0, 0, 0, 0, 4],
+    ],
+    I: [
+      [4, 4, 4],
+      [0, 4, 0],
+      [0, 4, 0],
+      [0, 4, 0],
+      [0, 4, 0],
+      [0, 4, 0],
+      [4, 4, 4],
+    ],
+    L: [
+      [4, 0, 0, 0, 0],
+      [4, 0, 0, 0, 0],
+      [4, 0, 0, 0, 0],
+      [4, 0, 0, 0, 0],
+      [4, 0, 0, 0, 0],
+      [4, 0, 0, 0, 0],
+      [4, 4, 4, 4, 4],
+    ],
   }
 
-  const totalYears = Object.values(data.total || {})
-  const totalThisYear = totalYears.length > 0 ? totalYears[0] : 0
+  // Create the full "REMIEL" pattern
+  const createRemielPattern = () => {
+    const weeks: { level: number; count: number; date: string }[][] = []
+    const word = ['R', 'E', 'M', 'I', 'E', 'L']
+    
+    word.forEach((letter, letterIndex) => {
+      const pattern = letterPatterns[letter as keyof typeof letterPatterns]
+      const letterWidth = pattern[0].length
+      
+      // Add each column of the letter
+      for (let col = 0; col < letterWidth; col++) {
+        const week = []
+        for (let row = 0; row < 7; row++) {
+          week.push({
+            level: pattern[row][col],
+            count: pattern[row][col] * 5,
+            date: new Date().toISOString().split('T')[0]
+          })
+        }
+        weeks.push(week)
+      }
+      
+      // Add spacing between letters (1 column)
+      if (letterIndex < word.length - 1) {
+        const spacer = []
+        for (let row = 0; row < 7; row++) {
+          spacer.push({ level: 0, count: 0, date: new Date().toISOString().split('T')[0] })
+        }
+        weeks.push(spacer)
+      }
+    })
+    
+    return weeks
+  }
 
-  // Group into weeks for the grid
-  const weeks: ContributionDay[][] = []
-  let currentWeek: ContributionDay[] = []
-
-  // Get last 365 days
-  const lastYear = data.contributions.slice(-371) // roughly 53 weeks
-
-  lastYear.forEach((day, i) => {
-    currentWeek.push(day)
-    if (currentWeek.length === 7 || i === lastYear.length - 1) {
-      weeks.push(currentWeek)
-      currentWeek = []
-    }
-  })
+  const weeks = createRemielPattern()
+  const currentYear = new Date().getFullYear().toString()
 
   const getLevelColor = (level: number) => {
     switch (level) {
@@ -53,34 +118,37 @@ export function ContributionGraph({ username, data }: ContributionGraphProps) {
   }
 
   return (
-    <div className="pt-8">
-      <h3 className="text-base font-semibold mb-4">Contribution Activity</h3>
-      <div className="border border-border rounded-md p-6 bg-card/30 overflow-hidden overflow-x-auto">
-        <div className="flex flex-col gap-2 min-w-[700px]">
-          <div className="flex justify-between items-center text-xs text-muted-foreground mb-2">
-            <span>{totalThisYear.toLocaleString()} contributions in the last year</span>
-            <div className="flex items-center gap-1">
-              <span>Less</span>
-              <div className="flex gap-1">
-                {[0, 1, 2, 3, 4].map((l) => (
-                  <div key={l} className={`w-3 h-3 rounded-sm ${getLevelColor(l)}`} />
-                ))}
+    <div className="pt-6 sm:pt-8">
+      <h3 className="text-sm sm:text-base font-semibold mb-3 sm:mb-4">
+        Contribution Activity
+      </h3>
+      <div className="border border-border rounded-md p-3 sm:p-6 bg-card/30 overflow-hidden">
+        <div className="overflow-x-auto">
+          <div className="flex flex-col gap-2 min-w-fit">
+            <div className="flex justify-end items-center text-[10px] sm:text-xs text-muted-foreground mb-2">
+              <div className="flex items-center gap-1 sm:gap-2">
+                <span className="hidden sm:inline">Less</span>
+                <div className="flex gap-0.5 sm:gap-1">
+                  {[0, 1, 2, 3, 4].map((l) => (
+                    <div key={l} className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-sm ${getLevelColor(l)}`} />
+                  ))}
+                </div>
+                <span className="hidden sm:inline">More</span>
               </div>
-              <span>More</span>
             </div>
-          </div>
-          <div className="flex gap-[3px]">
-            {weeks.map((week, i) => (
-              <div key={i} className="flex flex-col gap-[3px]">
-                {week.map((day, j) => (
-                  <div
-                    key={`${i}-${j}`}
-                    className={`w-3 h-3 rounded-sm ${getLevelColor(day.level)} transition-colors hover:ring-1 hover:ring-white/20`}
-                    title={`${day.count} contributions on ${day.date}`}
-                  />
-                ))}
-              </div>
-            ))}
+            <div className="flex gap-[3px]">
+              {weeks.map((week, i) => (
+                <div key={i} className="flex flex-col gap-[3px]">
+                  {week.map((day, j) => (
+                    <div
+                      key={`${i}-${j}`}
+                      className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-sm ${getLevelColor(day.level)} transition-all hover:ring-1 hover:ring-primary/50 cursor-pointer`}
+                      title={`REMIEL`}
+                    />
+                  ))}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

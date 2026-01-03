@@ -98,9 +98,22 @@ export default function GitHubPortfolio() {
     <div className="min-h-screen bg-background text-foreground dark">
       {/* Header / Navbar */}
       <header className="border-b border-border bg-card/50 sticky top-0 z-50 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <Github className="w-8 h-8" />
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 h-14 sm:h-16 flex items-center justify-between">
+          <div className="flex items-center gap-2 sm:gap-4 flex-1">
+            <Github className="w-6 h-6 sm:w-8 sm:h-8 flex-shrink-0" />
+            <div className="flex md:hidden items-center gap-1 border border-border rounded-md px-2 py-1 bg-background text-xs text-muted-foreground flex-1 focus-within:ring-1 focus-within:ring-primary transition-all">
+              <Search className="w-3 h-3 flex-shrink-0" />
+              <input
+                type="text"
+                placeholder="Search..."
+                value={searchQuery}
+                onChange={(e) => {
+                  setSearchQuery(e.target.value)
+                  if (activeTab !== "repositories" && e.target.value) setActiveTab("repositories")
+                }}
+                className="bg-transparent border-none outline-none w-full placeholder:text-muted-foreground/50"
+              />
+            </div>
             <div className="hidden md:flex items-center gap-1 border border-border rounded-md px-2 py-1 bg-background text-sm text-muted-foreground w-64 focus-within:ring-1 focus-within:ring-primary transition-all">
               <Search className="w-4 h-4" />
               <input
@@ -115,15 +128,14 @@ export default function GitHubPortfolio() {
               />
             </div>
           </div>
-          <div className="flex items-center gap-4 text-sm font-medium text-muted-foreground"></div>
         </div>
       </header>
 
       {/* Main Content Layout */}
-      <main className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-8">
+      <main className="max-w-7xl mx-auto px-3 sm:px-4 py-4 sm:py-6 lg:py-8 grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-4 sm:gap-6 lg:gap-8">
         {/* Profile Sidebar */}
-        <aside className="space-y-6">
-          <div className="relative group">
+        <aside className="space-y-4 sm:space-y-6">
+          <div className="relative group max-w-[280px] mx-auto lg:mx-0">
             <div className="w-full aspect-square rounded-full overflow-hidden border border-border">
               <Image
                 src="https://avatars.githubusercontent.com/u/66111735?v=4"
@@ -133,50 +145,54 @@ export default function GitHubPortfolio() {
                 className="object-cover"
               />
             </div>
-            <div className="absolute bottom-4 right-4 bg-card border border-border rounded-full p-2 shadow-sm">
-              <span className="text-xl" role="img" aria-label="emoji">
+            <div className="absolute bottom-2 right-2 sm:bottom-4 sm:right-4 bg-card border border-border rounded-full p-1.5 sm:p-2 shadow-sm">
+              <span className="text-base sm:text-xl" role="img" aria-label="emoji">
                 ☢️
               </span>
             </div>
           </div>
 
-          <div className="space-y-1">
-            <h1 className="text-2xl font-bold">Jaswanth Remiel AG</h1>
-            <p className="text-xl text-muted-foreground">JaswanthRemiel</p>
+          <div className="space-y-1 text-center lg:text-left">
+            <h1 className="text-xl sm:text-2xl font-bold">Jaswanth Remiel AG</h1>
+            <p className="text-lg sm:text-xl text-muted-foreground">JaswanthRemiel</p>
           </div>
 
-          <p className="text-sm font-medium">dev, design and chip ✱ currently shipping @toolsbyremiel</p>
+          <p className="text-xs sm:text-sm font-medium text-center lg:text-left">dev, design and chip ✱ currently shipping @toolsbyremiel</p>
 
-          <button className="w-full py-1.5 border border-border rounded-md bg-secondary hover:bg-secondary/80 text-sm font-semibold transition-colors">
+          <Link 
+            href="https://github.com/jaswanthremiel" 
+            target="_blank"
+            className="w-full py-1.5 border border-border rounded-md bg-secondary hover:bg-secondary/80 text-xs sm:text-sm font-semibold transition-colors flex items-center justify-center"
+          >
             Follow
-          </button>
+          </Link>
 
-          <div className="space-y-3 pt-4 border-t border-border">
-            <div className="flex items-center gap-2 text-sm">
-              <MapPin className="w-4 h-4 text-muted-foreground" />
+          <div className="space-y-2 sm:space-y-3 pt-3 sm:pt-4 border-t border-border">
+            <div className="flex items-center gap-2 text-xs sm:text-sm justify-center lg:justify-start">
+              <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-muted-foreground flex-shrink-0" />
               <span>Tamilnadu, India</span>
             </div>
-            <div className="flex items-center gap-2 text-sm">
-              <LinkIcon className="w-4 h-4 text-muted-foreground" />
-              <Link href="https://remiel.work" className="hover:text-primary transition-colors font-semibold">
+            <div className="flex items-center gap-2 text-xs sm:text-sm justify-center lg:justify-start">
+              <LinkIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-muted-foreground flex-shrink-0" />
+              <Link href="https://remiel.work" className="hover:text-primary transition-colors font-semibold truncate">
                 remiel.work
               </Link>
             </div>
-            <div className="flex items-center gap-2 text-sm">
-              <Twitter className="w-4 h-4 text-muted-foreground" />
-              <Link href="https://twitter.com/jrxag_official" className="hover:text-primary transition-colors">
+            <div className="flex items-center gap-2 text-xs sm:text-sm justify-center lg:justify-start">
+              <Twitter className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-muted-foreground flex-shrink-0" />
+              <Link href="https://twitter.com/jrxag_official" className="hover:text-primary transition-colors truncate">
                 @jrxag_official
               </Link>
             </div>
-            <div className="flex items-center gap-2 text-sm">
-              <Linkedin className="w-4 h-4 text-muted-foreground" />
-              <Link href="https://linkedin.com/in/jaswanthremiel" className="hover:text-primary transition-colors">
+            <div className="flex items-center gap-2 text-xs sm:text-sm justify-center lg:justify-start">
+              <Linkedin className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-muted-foreground flex-shrink-0" />
+              <Link href="https://linkedin.com/in/jaswanthremiel" className="hover:text-primary transition-colors truncate">
                 in/jaswanthremiel
               </Link>
             </div>
-            <div className="flex items-center gap-2 text-sm">
-              <Instagram className="w-4 h-4 text-muted-foreground" />
-              <Link href="https://instagram.com/jrxag_official" className="hover:text-primary transition-colors">
+            <div className="flex items-center gap-2 text-xs sm:text-sm justify-center lg:justify-start">
+              <Instagram className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-muted-foreground flex-shrink-0" />
+              <Link href="https://instagram.com/jrxag_official" className="hover:text-primary transition-colors truncate">
                 jrxag_official
               </Link>
             </div>
@@ -184,50 +200,50 @@ export default function GitHubPortfolio() {
         </aside>
 
         {/* Projects Content Area */}
-        <section className="space-y-6">
+        <section className="space-y-4 sm:space-y-6">
           {/* Tabs */}
-          <nav className="flex items-center gap-6 border-b border-border text-sm overflow-x-auto pb-0.5">
+          <nav className="flex items-center gap-4 sm:gap-6 border-b border-border text-xs sm:text-sm overflow-x-auto pb-0.5 -mx-3 sm:mx-0 px-3 sm:px-0">
             <button
               onClick={() => setActiveTab("overview")}
-              className={`flex items-center gap-2 px-1 py-3 border-b-2 transition-colors ${activeTab === "overview" ? "border-primary font-semibold text-foreground" : "border-transparent text-muted-foreground hover:border-border"}`}
+              className={`flex items-center gap-1.5 sm:gap-2 px-1 py-2.5 sm:py-3 border-b-2 transition-colors whitespace-nowrap ${activeTab === "overview" ? "border-primary font-semibold text-foreground" : "border-transparent text-muted-foreground hover:border-border"}`}
             >
-              <BookOpen className="w-4 h-4" />
+              <BookOpen className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               Overview
             </button>
             <button
               onClick={() => setActiveTab("repositories")}
-              className={`flex items-center gap-2 px-1 py-3 border-b-2 transition-colors ${activeTab === "repositories" ? "border-primary font-semibold text-foreground" : "border-transparent text-muted-foreground hover:border-border"}`}
+              className={`flex items-center gap-1.5 sm:gap-2 px-1 py-2.5 sm:py-3 border-b-2 transition-colors whitespace-nowrap ${activeTab === "repositories" ? "border-primary font-semibold text-foreground" : "border-transparent text-muted-foreground hover:border-border"}`}
             >
-              <BookOpen className="w-4 h-4" />
+              <BookOpen className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               Repositories
-              <span className="bg-secondary px-2 rounded-full text-xs py-0.5">{githubData?.repos.length || 0}</span>
+              <span className="bg-secondary px-1.5 sm:px-2 rounded-full text-[10px] sm:text-xs py-0.5">{githubData?.repos.length || 0}</span>
             </button>
           </nav>
 
           {/* Projects Grid */}
           {loading ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
               {[1, 2, 3, 4].map((i) => (
-                <div key={i} className="h-32 rounded-md bg-secondary/20 animate-pulse" />
+                <div key={i} className="h-28 sm:h-32 rounded-md bg-secondary/20 animate-pulse" />
               ))}
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
               {displayRepos?.map((project) => (
                 <div
                   key={project.name}
-                  className="p-4 border border-border rounded-md bg-card hover:bg-card/80 transition-all flex flex-col justify-between"
+                  className="p-3 sm:p-4 border border-border rounded-md bg-card hover:bg-card/80 transition-all flex flex-col justify-between min-h-[120px] sm:min-h-[140px]"
                 >
-                  <div className="space-y-2">
-                    <div className="flex items-center justify-between">
+                  <div className="space-y-1.5 sm:space-y-2">
+                    <div className="flex items-start justify-between gap-2">
                       <Link
                         href={project.html_url}
                         target="_blank"
-                        className="text-primary font-semibold hover:underline text-sm md:text-base"
+                        className="text-primary font-semibold hover:underline text-sm md:text-base break-words line-clamp-1"
                       >
                         {project.name}
                       </Link>
-                      <span className="text-[10px] md:text-xs font-medium px-2 py-0.5 border border-border rounded-full text-muted-foreground bg-background">
+                      <span className="text-[10px] md:text-xs font-medium px-1.5 sm:px-2 py-0.5 border border-border rounded-full text-muted-foreground bg-background whitespace-nowrap flex-shrink-0">
                         Public
                       </span>
                     </div>
@@ -236,19 +252,19 @@ export default function GitHubPortfolio() {
                     </p>
                   </div>
 
-                  <div className="flex items-center gap-4 pt-4 text-[10px] md:text-xs text-muted-foreground">
+                  <div className="flex items-center gap-3 sm:gap-4 pt-3 sm:pt-4 text-[10px] md:text-xs text-muted-foreground flex-wrap">
                     {project.language && (
                       <div className="flex items-center gap-1">
-                        <div className="w-3 h-3 rounded-full bg-primary" />
-                        <span>{project.language}</span>
+                        <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-primary flex-shrink-0" />
+                        <span className="truncate">{project.language}</span>
                       </div>
                     )}
                     <div className="flex items-center gap-1 hover:text-primary cursor-pointer">
-                      <Star className="w-3 h-3" />
+                      <Star className="w-3 h-3 flex-shrink-0" />
                       <span>{project.stargazers_count}</span>
                     </div>
                     <div className="flex items-center gap-1 hover:text-primary cursor-pointer">
-                      <GitFork className="w-3 h-3" />
+                      <GitFork className="w-3 h-3 flex-shrink-0" />
                       <span>{project.forks_count}</span>
                     </div>
                   </div>
