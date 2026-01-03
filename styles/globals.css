@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -40,25 +40,25 @@
 }
 
 .dark {
-  --background: oklch(0.129 0.005 256.331); /* #0d1117 */
-  --foreground: oklch(0.897 0.006 256.319); /* #c9d1d9 */
-  --card: oklch(0.158 0.006 256.323); /* #161b22 */
-  --card-foreground: oklch(0.897 0.006 256.319);
-  --popover: oklch(0.158 0.006 256.323);
-  --popover-foreground: oklch(0.897 0.006 256.319);
-  --primary: oklch(0.58 0.14 250); /* #58a6ff */
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.25 0.01 250); /* #21262d */
-  --secondary-foreground: oklch(0.897 0.006 256.319);
-  --muted: oklch(0.25 0.01 250);
-  --muted-foreground: oklch(0.65 0 0); /* #8b949e */
-  --accent: oklch(0.25 0.01 250);
-  --accent-foreground: oklch(0.897 0.006 256.319);
-  --destructive: oklch(0.5 0.2 25);
-  --destructive-foreground: oklch(0.897 0.006 256.319);
-  --border: oklch(0.27 0.01 250); /* #30363d */
-  --input: oklch(0.27 0.01 250);
-  --ring: oklch(0.58 0.14 250);
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
   --chart-1: oklch(0.488 0.243 264.376);
   --chart-2: oklch(0.696 0.17 162.48);
   --chart-3: oklch(0.769 0.188 70.08);
@@ -75,7 +75,8 @@
 }
 
 @theme inline {
-  /* optional: --font-sans, --font-serif, --font-mono if they are applied in the layout.tsx */
+  --font-sans: 'Geist', 'Geist Fallback';
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);

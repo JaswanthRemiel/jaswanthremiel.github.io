@@ -1,48 +1,45 @@
-import { Inter } from "next/font/google";
-import * as links from "@/components/details";
-import "./globals.css";
+import type { Metadata } from 'next'
+import { Geist, Geist_Mono } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/next'
+import './globals.css'
 
-const inter = Inter({ subsets: ["latin"] });
+const _geist = Geist({ subsets: ["latin"] });
+const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Remiel — Portfolio",
-  description:
-    "Explore Remiel's portfolio showcasing projects, achievements, and expertise in tech, built with Next.js for a seamless experience.",
-  openGraph: {
-    title: "Remiel — Portfolio",
-    description: "Showcasing my work, projects, and achievements.",
-    url: "https://remiel.fyi",
-    images: [
+export const metadata: Metadata = {
+  title: 'v0 App',
+  description: 'Created with v0',
+  generator: 'v0.app',
+  icons: {
+    icon: [
       {
-        url: links.preview,
-        width: 1200,
-        height: 630,
-        alt: "Remiel's Portfolio",
+        url: '/icon-light-32x32.png',
+        media: '(prefers-color-scheme: light)',
+      },
+      {
+        url: '/icon-dark-32x32.png',
+        media: '(prefers-color-scheme: dark)',
+      },
+      {
+        url: '/icon.svg',
+        type: 'image/svg+xml',
       },
     ],
-    type: "website",
+    apple: '/apple-icon.png',
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Remiel — Portfolio",
-    description: "Showcasing my work, projects, and achievements.",
-    images: [links.preview],
-  },
-};
+}
 
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode;
-}) {
+}: Readonly<{
+  children: React.ReactNode
+}>) {
   return (
-    <html lang="en" className="">
-      <head></head>
-      <body
-        className={`${inter.className} bg-black text-white antialiased dark:bg-stone-100 dark:text-black`}
-      >
+    <html lang="en">
+      <body className={`font-sans antialiased`}>
         {children}
+        <Analytics />
       </body>
     </html>
-  );
+  )
 }
